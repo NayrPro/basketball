@@ -12,6 +12,7 @@ export default function Navbar(){
             <li><a href="/">Courses</a></li>
             <li><a href="/">Students</a></li>
             <li><a href="/">About</a></li>
+            <li><a href="/">Login</a></li>
           </ul>
       </nav>   
     )

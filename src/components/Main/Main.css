@@ -1,26 +1,22 @@
-.main{
-    background-image: url('./image.jpg');
-    height: 41rem;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+.main-image{
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    display: block;
 }
-
 .main-title{
     color: white;
     position: absolute;
     z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    left: 10rem;
-    top: 19rem;
 }
 
 .main-overlay{
-    display: block;
-    height: inherit;
-    background-color: black;
-    opacity: 50%;
     position: relative;
-    background: repeating-linear-gradient( 45deg, gray 5px, black 10px, white 5px);
+    background: repeating-linear-gradient( 45deg, rgb(128, 128, 128, 0.5) 5px, rgb(0, 0, 0, 0.5) 10px, rgb(255, 255, 255, 0.5) 5px);
 }
 
 .main-info{
