@@ -1,0 +1,33 @@
+@font-face {
+    font-family: EqualizeRegular;
+    src: url("./EqualizeRegular-xXjr.ttf");
+  }
+  
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 1rem;
+    background-color: #0d0e0f;
+  }
+  
+  .navbar-title>a{
+    text-decoration: none;
+    font-family: EqualizeRegular;
+    color: #f1f1f1;
+  }
+  
+  .navbar-links{
+    display: flex;
+    color: #f1f1f1;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 25rem;
+    margin: 0px;
+    margin-right: 1rem;
+  }
+  
+  .navbar-links>li>a{
+    text-decoration: none;
+    color: #f1f1f1;
+  }

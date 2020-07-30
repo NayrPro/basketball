@@ -1,0 +1,28 @@
+.main{
+    background-image: url('./image.jpg');
+    height: 41rem;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.main-title{
+    color: white;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    left: 10rem;
+    top: 19rem;
+}
+
+.main-overlay{
+    display: block;
+    height: inherit;
+    background-color: black;
+    opacity: 50%;
+    position: relative;
+    background: repeating-linear-gradient( 45deg, gray 5px, black 10px, white 5px);
+}
+
+.main-info{
+    text-align: center;
+}
