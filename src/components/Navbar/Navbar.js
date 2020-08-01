@@ -8,7 +8,7 @@ export default function Navbar(){
             <a href="/">BASKETBALL</a>
         </div>
           <ul className="navbar-links">
-            <li><a href="/">Home</a></li>
+            <li className="navbar-link home"><a href="/">Home</a></li>
             <li><a href="/">Courses</a></li>
             <li><a href="/">Students</a></li>
             <li><a href="/">Videos</a></li>

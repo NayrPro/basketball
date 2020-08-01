@@ -12,11 +12,11 @@
   .navbar-title{
     padding: 1rem;
   }
-
+  
   .navbar-title>a{
     text-decoration: none;
     font-family: EqualizeRegular;
-    color: #f1f1f1;
+    color: #ffff50;
   }
   
   .navbar-links{
@@ -42,3 +42,9 @@
   .navbar-links>li:hover{
     background: #4b4848
   }
+
+  .navbar-link.home{
+    background: #4b4848;
+  }
+
+  
