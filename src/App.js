@@ -1,14 +1,10 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar/Navbar'
-import Main from './components/Main/Main'
-import Footer from './components/Footer/Footer'
+import Home from './components/Home'
 function App() {
   return (
     <div className="App">
-      <Navbar /> 
-      <Main />
-      <Footer />
+      <Home/>
     </div>
   );
 }

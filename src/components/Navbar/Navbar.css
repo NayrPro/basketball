@@ -6,11 +6,13 @@
   .navbar{
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
-    height: 1rem;
     background-color: #0d0e0f;
   }
   
+  .navbar-title{
+    padding: 1rem;
+  }
+
   .navbar-title>a{
     text-decoration: none;
     font-family: EqualizeRegular;
@@ -20,14 +22,23 @@
   .navbar-links{
     display: flex;
     color: #f1f1f1;
-    justify-content: space-between;
     list-style-type: none;
-    width: 25rem;
-    margin: 0px;
-    margin-right: 1rem;
+    margin: 0;
+    width: 50%;
   }
   
+  .navbar-links>li{
+    width: 84px;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
   .navbar-links>li>a{
     text-decoration: none;
     color: #f1f1f1;
+  }
+
+  .navbar-links>li:hover{
+    background: #4b4848
   }
