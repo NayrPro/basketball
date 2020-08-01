@@ -36,7 +36,7 @@
 
   .navbar-links>li>a{
     text-decoration: none;
-    color: #f1f1f1;
+    color: #9d9393;
   }
 
   .navbar-links>li:hover{
@@ -45,6 +45,10 @@
 
   .navbar-link.home{
     background: #4b4848;
+  }
+
+  .navbar-link.home>a{
+    color: #f1f1f1;
   }
 
   
