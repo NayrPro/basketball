@@ -1,6 +1,6 @@
 @font-face {
-    font-family: OpenSans-ExtraBoldItalic;
-    src: url("./OpenSans-ExtraBoldItalic-webfont.ttf");
+    font-family: OpenSans-ExtraBold;
+    src: url("./OpenSans-ExtraBold-webfont.ttf");
 }
   
 .main{
@@ -12,16 +12,35 @@
     z-index: -1;
     display: block;
 }
+
 .main-title{
-    /* color: white; */
-    position: absolute;
+	position: absolute;
     z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 7rem;
+    margin-top: 12%;
+    width: 82%;
+    margin-left: 3%;
+    font-family: OpenSans-ExtraBold;
+    font-style: italic;
+}
+
+.main-title-paragraph{
+	position: absolute;
+	z-index: 2;
+	width: 40%;
+	left: 55%;
+	bottom: 8%;
     
-    font-family: OpenSans-ExtraBoldItalic;
-    text-align: center;
+    font-weight: bold;
+	text-align: justify;
+	font-size: 19px;
+}
+
+.main-title-paragraph>span{
+	display: block;
+	margin-top: 10%;
+	float: right;
+	cursor: pointer;
 }
 
 .main-overlay{
@@ -38,10 +57,12 @@
 
 .main-info>h2{
     text-align: center;
+    font-size: 2rem;
  }
  
  .main-info>p{
      text-align: justify;
+     font-weight: bold;
  }
 
  .main-sections {

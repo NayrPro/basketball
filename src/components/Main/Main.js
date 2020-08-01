@@ -3,7 +3,8 @@ import './Main.css'
 export default function Main() {
     return (
         <div className="main">
-            <h1 className="main-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, et!</h1>
+            <h1 className="main-title">LOREM IPSUM DOLOR!</h1>
+            <p className="main-title-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat perspiciatis quis asperiores, enim esse deleniti iste harum hic accusamus reprehenderit quaerat repellat optio laboriosam repellendus ab ipsam earum possimus. Labore quos quaerat at corporis esse! Asperiores.<span>Click Here!</span></p>
             <div className="main-overlay">
                 <img className="main-image" src={require('./image.jpg')} alt="main"></img>
             </div>

@@ -24,6 +24,7 @@
 .footer-lists>ul>li>a{
     text-decoration: none;
     color: #0d0e0f;
+    font-weight: bold;
 }
 
 .footer-social-medias{
