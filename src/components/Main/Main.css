@@ -24,7 +24,7 @@
     font-family: OpenSans-ExtraBold;
     font-size: 7rem;
     font-style: italic;
-    animation: title 3s normal 1;
+    animation: title 1.5s ease-in 1;
 }
 
 .main-title-paragraph{
@@ -37,7 +37,7 @@
     font-weight: bold;
 	text-align: justify;
     font-size: 19px;
-    animation: paragraph 3s normal 1;
+    animation: paragraph 1.5s ease-in 1;
 }
 
 .main-title-paragraph>span{
@@ -83,7 +83,8 @@
 
 .main-section>img{
     width: 100%;
-    height: 100%;   
+    height: 100%;
+    cursor: pointer;   
 }
 
 .main-form{
@@ -176,4 +177,8 @@
         left : 55%;
         opacity: 1;
     }
+}
+
+.main-section:hover{
+    opacity: .5;
 }
