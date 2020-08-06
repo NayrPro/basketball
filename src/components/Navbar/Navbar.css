@@ -1,57 +1,86 @@
 @font-face {
-    font-family: EqualizeRegular;
-    src: url("./EqualizeRegular-xXjr.ttf");
-  }
-  
-  .navbar{
-    display: flex;
-    justify-content: space-between;
-    background-color: #0d0e0f;
-    position: fixed;
-    z-index: 3;
-    width: 100%;
-  }
-  
-  .navbar-title{
-    padding: 1rem;
-  }
-  
-  .navbar-title>a{
-    text-decoration: none;
-    font-family: EqualizeRegular;
-    color: #ffff50;
-  }
-  
-  .navbar-links{
-    display: flex;
-    color: #f1f1f1;
-    list-style-type: none;
-    margin: 0;
-    width: 50%;
-  }
-  
-  .navbar-links>li{
-    width: 84px;
-    text-align: center;
-    padding: 1rem;
-    cursor: pointer;
-  }
+  font-family: EqualizeRegular;
+  src: url("./EqualizeRegular-xXjr.ttf");
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  background-color: #0d0e0f;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+}
 
-  .navbar-links>li>a{
-    text-decoration: none;
-    color: #9d9393;
-  }
+.navbar-title{
+  padding: 1rem;
+}
 
-  .navbar-links>li:hover{
-    background: #4b4848
-  }
+.navbar-title>a{
+  text-decoration: none;
+  font-family: EqualizeRegular;
+  color: #ffff50;
+}
 
-  .navbar-link.home{
-    background: #4b4848;
-  }
+.navbar-links{
+  display: flex;
+  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  width: 22.2rem;
+}
 
-  .navbar-link.home>a{
-    color: #f1f1f1;
-  }
+.navbar-link{
+  cursor: pointer;  
+  text-align: center;
+  width: 5.4rem;
+  padding: 1rem;
+}
 
+.navbar-link:hover{
+  background: #4b4848
+}
+
+.navbar-link>a{
+  text-decoration: none;
+  color: #9d9393;
+}
+
+.navbar-link.home{
+  background: #4b4848;
+}
+
+.navbar-link.home>a{
+  color: #f1f1f1;
+}
+
+.menu-list{
+  display: none;
+  padding: 0;
+  position: absolute;
+  background-color: #0d0e0f;
+  margin-top: 1.05rem;
+  width: 7.4rem;
+  right: 7.4rem;
+}
   
+.menu-list>a{
+  display: block;
+  text-decoration: none;
+  color: #9d9393;
+  padding: .5rem;
+  text-align: center;
+ }
+
+
+.navbar-link.menu:hover .menu-list{
+  display: block;
+}
+
+
+.menu-list>a:hover{
+  background: #4b4848;
+}

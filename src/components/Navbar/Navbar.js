@@ -3,19 +3,30 @@ import './Navbar.css'
 
 export default function Navbar(){
     return(
-        <nav className="navbar">
-        <div className="navbar-title">
+        <nav class="navbar">
+        <div class="navbar-title">
             <a href="/">BASKETBALL</a>
         </div>
-          <ul className="navbar-links">
-            <li className="navbar-link home"><a href="/">Home</a></li>
-            <li><a href="/">Courses</a></li>
-            <li><a href="/">Students</a></li>
-            <li><a href="/">Videos</a></li>
-            <li><a href="/">Blog</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Login</a></li>
-          </ul>
-      </nav>   
+          <div class="navbar-links">
+            <div class="navbar-link home">
+              <a href="/">Home</a>
+            </div>
+            <div class="navbar-link menu">
+                <a href="/">Menu</a>
+                <div class="menu-list">
+                    <a href="/">Courses</a>
+                    <a href="/">Students</a>
+                    <a href="/">Videos</a>
+                    <a href="/">Blog</a>
+                    <a href="/">About</a>
+                </div>  
+            </div>
+            <div class="navbar-link">
+                <a href="/">Login</a>
+            </div>
+          </div>
+      </nav>
     )
 }
+
+

@@ -1,3 +1,12 @@
 body{
   background: #0d0e0f;
+  animation: body 2s ease-in 1;
+}
+
+@keyframes body{
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
 }
