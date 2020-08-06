@@ -1,0 +1,94 @@
+
+.main-sections{
+    width: 37.5rem;
+    height: 31.898rem;
+    /* width: 45%; */
+    margin: auto;
+    /* margin-bottom: auto; */
+    margin-bottom: 9rem;
+    
+    overflow: hidden;   
+    border-radius: 9%;
+}
+
+
+
+.main-sections-front,.main-sections-back{
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform 0.6s linear;
+}
+.main-sections-front{
+    height: 31.898rem;
+    width: 37.5rem;
+    transform: perspective(600px) rotateY(0deg);
+    
+    display: grid;
+    grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+    grid-gap: 1% 1%;
+}
+.main-sections-back{
+    cursor: pointer;
+    height: 31.898rem;
+    width: 37.5rem;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+
+
+.main-section-info {
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    background-color: rgba(0,0,0,0.9);
+    width: 96%;
+    color: white;
+    padding: 20px;
+    font-family: sans-serif;
+    cursor: default;
+    opacity: 0;
+    transition-delay: .5s;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+}
+.main-section-info>h3{
+    margin-top: 0;
+}
+.main-section-info>p {
+    margin: 0px;
+}
+.main-section-info > a {
+    display: block;
+    float: right;
+    color: white;
+    font-weight: bold;
+    padding-right: 30px;
+    position: relative;
+    top: 13px;
+}
+
+
+
+
+.main-section{
+    width: 297px;
+    height: 253px;
+    background-size: cover;
+    border-radius: 9%;
+}
+.main-section.courses{
+    background-image: url("./images/field.jpg");
+}
+.main-section.students{
+    background-image: url("./images/shooting.jpg");
+}
+.main-section.videos{
+    background-image: url("./images/street_game.jpg");
+}
+.main-section.blog{
+    background-image: url("./images/ball.jpg");
+}
+.main-section:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
