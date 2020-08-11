@@ -2,13 +2,16 @@
 .main-sections{
     width: 37.5rem;
     height: 31.898rem;
-    /* width: 45%; */
-    margin: auto;
-    /* margin-bottom: auto; */
-    margin-bottom: 9rem;
+    
+    margin: 0;
+    margin-bottom: 3rem;
     
     overflow: hidden;   
     border-radius: 9%;
+
+    position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 
@@ -91,4 +94,23 @@
 .main-section:hover{
     opacity: 0.5;
     cursor: pointer;
+}
+
+
+@media (max-width: 576px) {
+	.main-sections {
+    		width: 23.5rem;
+	}
+	.main-sections-front {
+		width: 23.5rem;	
+	}
+	.main-section {
+    		width: 186px;
+	}
+	.main-sections-back {
+		width: 23.5rem;
+	}
+	.main-section-info{
+		height: 53%;
+	}	
 }

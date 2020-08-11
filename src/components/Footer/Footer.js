@@ -22,14 +22,14 @@ export default function Footer() {
                     <li> <a href="/">Lorem</a></li>
                 </ul>
             </div>
-            <div class="footer-social-medias">
-                <div class="footer-social-medias-container">
-                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                    <i class="fab fa-facebook" aria-hidden="true"></i>
-                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                    <i class="fab fa-github" aria-hidden="true"></i>
-                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            <div className="footer-social-medias">
+                <div className="footer-social-medias-container">
+                    <i className="fab fa-instagram" aria-hidden="true"></i>
+                    <i className="fab fa-twitter" aria-hidden="true"></i>
+                    <i className="fab fa-facebook" aria-hidden="true"></i>
+                    <i className="fab fa-youtube" aria-hidden="true"></i>
+                    <i className="fab fa-github" aria-hidden="true"></i>
+                    <i className="fab fa-linkedin-in" aria-hidden="true"></i>
                 </div>
             </div>
         </div>

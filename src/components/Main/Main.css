@@ -1,8 +1,18 @@
 @font-face {
     font-family: OpenSans-ExtraBold;
-    src: url("./OpenSans-ExtraBold-webfont.ttf");
+    src: url("./fonts/OpenSans-ExtraBold-webfont.ttf");
 }
-  
+
+@font-face{
+    font-family: OldSportAthletic;
+    src: url("./fonts/OldSport02AthleticNcv-E0gj.ttf");
+}
+
+@font-face{
+    font-family: scoreboard;
+    src: url("./fonts/scoreboard.ttf")
+}
+
 .main{
     color: #f1f1f1;
 }
@@ -22,7 +32,7 @@
     
     color: #ffff50;
     font-family: OpenSans-ExtraBold;
-    font-size: 7rem;
+    font-size: 6rem;
     font-style: italic;
     animation: title 1.5s ease-in 1;
 }
@@ -31,18 +41,19 @@
 	position: absolute;
 	z-index: 2;
 	width: 40%;
-    bottom: 8%;
+    margin-top: 25%;
     left: 55%;
     
-    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
 	text-align: justify;
     font-size: 19px;
     animation: paragraph 1.5s ease-in 1;
 }
 
-.main-title-paragraph>span{
+.main-title-paragraph>a{
+    color: #f1f1f1;
 	display: block;
-	margin-top: 10%;
+	margin-top: 5%;
 	float: right;
 	cursor: pointer;
 }
@@ -51,23 +62,6 @@
     position: relative;
     background: repeating-linear-gradient( 45deg, rgb(128, 128, 128, 0.5) 5px, rgb(0, 0, 0, 0.5) 10px, rgb(255, 255, 255, 0.5) 5px);
 }
-
-.main-info{
-    margin: auto;
-    margin-top: 15rem;
-    margin-bottom: 15rem;
-    width: 70%;
-}
-
-.main-info>h2{
-    text-align: center;
-    font-size: 2rem;
- }
- 
- .main-info>p{
-     text-align: justify;
-     font-weight: bold;
- }
 
  .main-sections {
     margin: auto;
@@ -97,16 +91,19 @@
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
     padding-bottom: 0;
-
+    
     font-weight: bold;
 }
 
 .main-form>h2{
-    width: 60%;
-	margin: auto;
-    margin-bottom: 1rem;
-    
+    width:90%;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+
+    font-family: OldSportAthletic;
     text-align: center;
+    font-size: 2rem;
 }
 
 .main-form> form{
@@ -120,12 +117,16 @@
     border-bottom: none;
 }
 
-.main-form>form>label{
+.form-control{
+    margin-bottom: 1rem;
+}
+
+.form-control>label{
+    font-family: OldSportAthletic;
     font-size: 22px;
 }
 
-.main-form-input{
-    margin-bottom: 1rem;
+.form-control>input{
     width: 100%;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -133,7 +134,13 @@
     border-radius: 1%;
 }
 
-.submit{
+.form-control>span{
+    color: red;
+    float: right;
+    font-weight: normal;
+}
+
+.submit, .submit-no-hover{
     display: block;
     margin: auto;
     margin-top: 1rem;
@@ -143,6 +150,7 @@
     border-radius: 2%;
     text-align: center;
     cursor: pointer;
+    font-family: OldSportAthletic;
     font-size: 21px;
     padding: 15px 32px;
     background-color: #ffcc00;
@@ -155,30 +163,109 @@
     border-color: #d8691e;
 }
 
-/** Animations **/
-
-@keyframes title{
-    from{
-        margin-left : 0%;
-        opacity: 0;
-    }
-    to{
-        margin-left : 3%;
-        opacity: 1;
-    }
-}
-
-@keyframes paragraph{
-    from{
-        left : 59%;
-        opacity: 0;
-    }
-    to{
-        left : 55%;
-        opacity: 1;
-    }
-}
 
 .main-section:hover{
     opacity: .5;
+}
+
+
+
+
+
+
+@media (min-width: 992px) {
+    
+    @keyframes title{
+        from{
+            margin-left : 0%;
+            opacity: 0;
+        }
+        to{
+            margin-left : 3%;
+            opacity: 1;
+        }
+    }
+    
+    @keyframes paragraph{
+        from{
+            left : 59%;
+            opacity: 0;
+        }
+        to{
+            left : 55%;
+            opacity: 1;
+        }
+    }
+}
+@media (max-width: 992px) { 
+    
+    .main-title{
+        
+        width: 100%;
+		font-size: 4rem;
+		text-align: center;	
+        margin-left: 0;
+    }
+    .main-title-paragraph{
+        
+        width: 90%;
+        left: 5%;	
+    }
+    
+    .main-form{
+        width: 85%;
+    }
+    
+    @keyframes title{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    @keyframes paragraph{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 768px) { 
+    
+    .main-title{
+        margin-top: 8rem;
+    }
+    .main-image{
+        width: 80rem;
+        height: auto;
+        left: -31rem;
+    }
+    
+    .main-title-paragraph{
+        margin-top: 21rem;
+    }
+    .main-form{
+        border-radius: 2%;
+    }
+    
+    .main-form>h2{
+        margin-top: 0;
+    }
+    
+    .main-form> form{
+        width:80%;
+    }
+}
+
+@media (max-width: 576px) { 
+    .main-title{
+        margin-top: 4rem;
+    }
+    .main-form{
+        border-radius: 0;
+    }
 }

@@ -1,6 +1,9 @@
 body{
-  background: #0d0e0f;
+  background: black;
   animation: body 2s ease-in 1;
+  
+  /*Prevent the horizontal scrollbar to show up during slide animations*/
+  overflow-x: hidden;
 }
 
 @keyframes body{

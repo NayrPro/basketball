@@ -1,0 +1,74 @@
+@font-face{
+  font-family: scoreboard;
+  src: url("./fonts/scoreboard.ttf")
+}
+
+
+.main-info {
+    padding: auto;
+    margin-top: 0;
+    margin-bottom: 3rem; 
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/stadium.jpg");
+    background-size: cover;
+    overflow: hidden;
+    /*These properties will set the position of the flash effect on the info container*/
+    --cursorX: 50vw;
+    --cursorY: 50vh;
+    cursor: default;
+  }
+  
+  .main-info::before {
+    cursor: default;
+    content: "";
+    display: block;
+    height: 100vh; 
+    width: 100%;
+    position: relative;
+  }
+  
+  .main-info-content {
+    width: 80%;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .main-info-content > h2 {
+    text-align: center;
+    font-family: scoreboard;
+    font-size: 2.5rem;
+    color: yellow;
+  }
+  
+  .main-info-content > p {
+    text-align: justify;
+    margin-bottom: 4%;
+  }
+  
+  .main-info-content > a{
+      float: right;
+      position: relative;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+  }
+
+
+  @media (max-width: 992px) {
+    .main-info::before{
+      /*Setting of the size and position of the flash effect*/
+          background: radial-gradient(circle 50vmax at 50% 50%, rgba(0, 0, 0, 0), black);
+    }
+  }
+  
+  
+  
+  @media (min-width: 992px) {
+    .main-info::before{
+      /*Setting of the size and position of the flash effect*/
+          background: radial-gradient(circle 30vmax at var(--cursorX) var(--cursorY), rgba(0, 0, 0, 0), black);
+    }
+  }
