@@ -34,6 +34,7 @@ export default function Navbar(){
         setColor("#f1f1f1")
       }else{
         setBackground("")
+        setColor("#9d9393")
       }
     }, [display])
 
@@ -72,17 +73,17 @@ export default function Navbar(){
                 }
                 
                 <div className="menu-list" style={{display: display}}>
-                    <a href="/">Courses</a><hr/>
-                    <a href="/">Students</a><hr/>
-                    <a href="/">Videos</a><hr/>
-                    <a href="/">Blog</a><hr/>
-                    <a href="/">About</a>
+                    <Link to="/courses">Courses</Link><hr/>
+                    <Link to="/students">Students</Link><hr/>
+                    <Link to="/videos">Videos</Link><hr/>
+                    <Link to="/blog">Blog</Link><hr/>
+                    <Link to="/about">About</Link>
                 </div>
 
               </div>
-              <a href="/" className="navbar-link">
+              <Link to="/login" className="navbar-link">
               { windowWidth > 768 ? "Login" : <i className="fa fa-user" ></i>}
-              </a>
+              </Link>
             </React.Fragment>
           </div>
       </nav>

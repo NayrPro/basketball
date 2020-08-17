@@ -1,0 +1,64 @@
+@import "../general.css";
+
+.students-banner{
+    background-image: url("./images/students.jpg");
+}
+
+
+.students-feedback{
+    padding-top: 2rem;
+    width: inherit;
+    background-color: #424242;
+}
+
+.student-feedback{
+    margin-left: 5rem;
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+.fas.fa-quote-left{
+    color: #ffba39;
+    font-size: 10rem;
+}
+.student-feedback>img{
+    height: 10rem;
+    border: 3px solid white;
+    border-radius: 50%;
+    float: right;
+    margin-right: 7rem;
+}
+.student-feedback>p{
+    margin-top: 3rem;
+    margin-left: 180px;
+    color: white;
+    font-weight: bold;
+    width: 80%;
+    font-style: italic;
+}
+
+.student-feedback>span{
+    display: block;
+    float: right;
+    margin-right: 7rem;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}
+
+@media (max-width: 992px){
+    .students-banner.overlay>h2{
+        font-size: 2.8rem;
+        left: 1rem;
+    }
+    .student-feedback>p{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 546px){
+    .student-feedback>img{
+        float: none;
+        margin-top: 2rem;
+    }
+}

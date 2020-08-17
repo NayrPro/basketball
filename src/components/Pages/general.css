@@ -1,0 +1,146 @@
+body {
+  background-color: black;
+  margin: 0;
+}
+
+@font-face {
+  font-family: EqualizeRegular;
+  src: url("./EqualizeRegular-xXjr.ttf");
+}
+/* Setting the rules for the banner of all pages
+    except error and login pages*/
+.blog-banner {
+  background-size: 88rem;
+  background-position-y: -23rem;
+  background-position-x: 0rem;
+  height: 16rem;
+}
+
+.courses-banner {
+  background-size: inherit;
+  background-position-y: -8rem;
+  background-position-x: -21rem;
+  height: 16rem;
+}
+
+.videos-banner {
+  background-size: 86rem;
+  background-position-y: -25rem;
+  background-position-x: 0rem;
+  height: 16rem;
+}
+
+.students-banner {
+  background-size: cover;
+  height: 16rem;
+}
+
+.about-banner {
+  background-size: 107rem;
+  background-position-y: -8rem;
+  background-position-x: -10rem;
+}
+
+.blog-banner, .courses-banner, .videos-banner, .students-banner, .about-banner {
+  background-repeat: no-repeat;
+  width: inherit;
+  overflow: hidden;
+}
+
+/*Adding an overlay on all the banners*/
+.about-banner.overlay, .blog-banner.overlay, .courses-banner.overlay,
+.error-banner.overlay, .login-banner.overlay, .students-banner.overlay,
+.videos-banner.overlay {
+  background: repeating-linear-gradient(45deg, rgba(128, 128, 128, 0.5) 5px, rgba(0, 0, 0, 0.5) 10px, rgba(255, 255, 255, 0.5) 5px);
+  height: inherit;
+  width: inherit;
+}
+
+/*Rules of the title of each banner*/
+.courses-banner.overlay h2, .students-banner.overlay h2, .videos-banner.overlay h2,
+.blog-banner.overlay h2 {
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  top: 34%;
+  left: 2rem;
+}
+
+/*Font of the title banner*/
+.courses-banner.overlay h2, .students-banner.overlay h2, .videos-banner.overlay h2,
+.blog-banner.overlay h2, .about-banner.overlay h2 {
+  font-size: 3rem;
+  font-family: EqualizeRegular;
+  color: #ffe40a;
+}
+
+/*Resizing of the background image of the banner when the window is resized*/
+@media (max-width: 769px) {
+  .about-banner {
+    background-position-x: -80rem;
+  }
+
+  .courses-banner {
+    background-position-x: -40rem;
+  }
+
+  .videos-banner {
+    background-position-x: -20rem;
+  }
+
+  .blog-banner {
+    background-position-x: -34rem;
+  }
+}
+/*Rules of the grid of videos and courses pages*/
+.videos-grid, .courses-grid {
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+/*Rules of each elements of the grid*/
+.course {
+  height: auto;
+  border-radius: 14px;
+  background-color: #fbca56;
+  width: 12rem;
+  border: 1px solid antiquewhite;
+  overflow: hidden;
+}
+
+.video {
+  height: 11rem;
+  border-radius: 0px;
+  background-color: gray;
+  width: 12rem;
+  border: 1px solid antiquewhite;
+  overflow: hidden;
+}
+
+/*Description of each element of the grid*/
+.video-description, .course-description {
+  overflow: hidden;
+}
+
+/*Full page background rules for error and login pages*/
+.login-banner, .error-banner {
+  background-repeat: no-repeat;
+  width: inherit;
+  background-size: 107rem;
+  background-position-y: -8rem;
+  background-position-x: -10rem;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/*Overlay of the background of error and login pages*/
+.login-banner-overlay, .error-banner-overlay {
+  background: repeating-linear-gradient(45deg, rgba(128, 128, 128, 0.5) 5px, rgba(0, 0, 0, 0.5) 10px, rgba(255, 255, 255, 0.5) 5px);
+  height: inherit;
+  width: inherit;
+  padding: 3rem;
+}
+
+/*# sourceMappingURL=general.css.map */

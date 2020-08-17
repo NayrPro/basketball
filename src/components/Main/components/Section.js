@@ -1,4 +1,5 @@
 import React, {useState, useRef} from 'react'
+import {Link} from 'react-router-dom'
 
 export default function Section() {
     
@@ -6,6 +7,7 @@ export default function Section() {
     const [opacity, setOpacity] = useState(0);
     const [transitionDuration, setTransitionDuration] = useState("1.5s");
     const [transitionDelay, setTransitionDelay] = useState("0.5s");
+    const [page, setPage] = useState();
 
     // References of each side of the container
     const front = useRef();
@@ -41,18 +43,23 @@ export default function Section() {
             //The title corresponding to the image clicked will be selected
             const title = Object.keys(Headings).filter(title => title === e.target.id);
             setHeading(Headings[title]);
-
+            
+            
             // The background image of the back side is set
             back.current.style.backgroundImage = getComputedStyle(e.target).backgroundImage;
             back.current.style.backgroundSize = "cover";
-        
+            
             transformFront = "perspective(600px) rotateY(-180deg)";
             transformBack = "perspective(600px) rotateY(0deg)";
             // The description tag of the back side fades in
             setOpacity("1"); 
             setTransitionDuration("1.5s");
             setTransitionDelay("0.5");
-    
+            
+            //page will receive the name of the page that
+            //will correspond to the link in the description
+            setPage("/"+title);
+            
         }else{ // The rotation will show the gallery of images and hide the back side
         
             transformFront = "perspective(600px) rotateY(0deg)";
@@ -120,9 +127,9 @@ export default function Section() {
 	                    <h3 id="info-title">{heading}</h3>
 	                    <p id="info-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit autem totam provident ullam reiciendis labore quaerat ad? Explicabo, eius provident.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit autem totam provident ullam reiciendis labore quaerat ad? Explicabo, eius provident.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit autem totam provident ullam reiciendis labore quaerat ad? Explicabo, eius provident.
 	                    </p>
-	                    <a href="/" id="info-link">Click here!</a>
+                        {/*Redirect to the page corresponding to page's value */}
+	                    <Link to={page} id="info-link">Click here!</Link>
                     </div>
-
                 </div>
         </div>
     )

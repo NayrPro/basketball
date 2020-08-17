@@ -1,0 +1,187 @@
+@use "sass:list";
+
+body{
+    background-color: black;
+    margin: 0;
+    // font-family: sans-serif;
+}
+
+
+@mixin equalizeRegular {
+    @font-face{
+        font-family: EqualizeRegular;
+        src: url("./EqualizeRegular-xXjr.ttf")
+    }
+}
+@include equalizeRegular;
+
+
+/* Setting the rules for the banner of all pages
+    except error and login pages*/
+    @mixin banner($elementBanner, $size, $posY, $posX){
+    #{$elementBanner}{
+        background-size: $size;
+	    @if ($size != cover){
+            background-position-y: $posY;
+    		background-position-x: $posX;
+        }
+        @if($elementBanner != ".about-banner"){    
+            height: 16rem;
+        }
+    }
+}
+$elementsBanner : (".blog-banner", ".courses-banner", ".videos-banner", ".students-banner", ".about-banner");
+$positionsY : (-23rem,-8rem,-25rem, none, -8rem);
+$positionsX : (0rem, -21rem, 0rem, none, -10rem);
+$sizes : (88rem, inherit, 86rem, cover, 107rem);
+@for $i from 1 through 5 {
+    @include banner(list.nth($elementsBanner,$i),list.nth($sizes,$i),list.nth($positionsY,$i),list.nth($positionsX,$i))
+}
+.blog-banner, .courses-banner, .videos-banner, .students-banner, .about-banner{
+    background-repeat: no-repeat;
+    width: inherit;
+    overflow: hidden;
+}
+
+
+
+/*Adding an overlay on all the banners*/
+@mixin banner-overlay{
+    background: repeating-linear-gradient( 45deg, rgb(128, 128, 128, 0.5) 5px, rgb(0, 0, 0, 0.5) 10px, rgb(255, 255, 255, 0.5) 5px);
+    height: inherit;
+    width: inherit;
+}
+.about-banner.overlay,.blog-banner.overlay,.courses-banner.overlay,
+.error-banner.overlay,.login-banner.overlay,.students-banner.overlay,
+.videos-banner.overlay{
+    @include banner-overlay;
+}
+
+
+/*Rules of the title of each banner*/
+@mixin banner-overlay-heading{
+    display: inline-block;
+    margin: 0;
+    
+    position: relative;
+    top: 34%;
+    left: 2rem;
+}
+.courses-banner.overlay,.students-banner.overlay,.videos-banner.overlay,
+.blog-banner.overlay{
+    h2{
+        @include banner-overlay-heading;
+    }
+}
+
+
+/*Font of the title banner*/
+@mixin banner-overlay-heading-font{
+    font-size: 3rem;
+    font-family: EqualizeRegular;
+    color: #ffe40a;
+}
+.courses-banner.overlay,.students-banner.overlay,.videos-banner.overlay,
+.blog-banner.overlay,.about-banner.overlay{
+    h2{
+        @include banner-overlay-heading-font;
+    }
+}
+
+
+/*Resizing of the background image of the banner when the window is resized*/
+@mixin banner-resizing($position-x, $elementBanner){
+    #{$elementBanner}{     
+        background-position-x: $position-x;
+    }
+}
+$elementsBannerResize : (".about-banner",".courses-banner", ".videos-banner", ".blog-banner");
+$elementSizes: (-80rem,-40rem,-20rem,-34rem);            
+@media (max-width: 769px){
+    @for $i from 1 through 4 {
+        @include banner-resizing(list.nth($elementSizes,$i), list.nth($elementsBannerResize,$i));
+    }
+}
+
+
+/*Rules of the grid of videos and courses pages*/
+@mixin content-grid{
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.videos-grid, .courses-grid{
+    @include content-grid;
+}
+
+
+/*Rules of each elements of the grid*/
+@mixin element-grid($element, $elementProps){
+    #{$element}{
+        height: map-get($elementProps, "height");
+        border-radius: map-get($elementProps, "border-radius");
+        background-color: map-get($elementProps, "background-color");
+        width: 12rem;
+        border: 1px solid antiquewhite;
+        overflow: hidden;
+    }
+}
+$courseProps: ("height": auto, "border-radius": 14px, "background-color": #fbca56);
+$videoProps: ("height": 11rem, "background-color": gray, "border-radius": 0px);
+$elementsProps : (".course" : $courseProps, ".video" : $videoProps);
+@each $elementName, $elementProp in $elementsProps{
+    @include element-grid($elementName, $elementProp);
+}
+
+
+/*Description of each element of the grid*/
+@mixin element-grid-description{
+    overflow: hidden;
+}
+.video-description, .course-description{
+    @include element-grid-description;
+}
+
+
+/*Full page background rules for error and login pages*/
+@mixin background-banner{
+    background-repeat: no-repeat;
+    width: inherit;
+    background-size: 107rem;
+    background-position-y: -8rem;
+    background-position-x: -10rem;
+    overflow: hidden; 
+    height: 100vh;
+}
+.login-banner, .error-banner{
+    @include background-banner;
+}
+    
+
+/*Overlay of the background of error and login pages*/
+@mixin background-banner-overlay{
+    background: repeating-linear-gradient( 45deg, rgb(128, 128, 128, 0.5) 5px, rgb(0, 0, 0, 0.5) 10px, rgb(255, 255, 255, 0.5) 5px);
+    height: inherit;
+    width: inherit;
+    padding: 3rem;
+}
+.login-banner-overlay, .error-banner-overlay{
+    @include background-banner-overlay;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+

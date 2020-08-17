@@ -1,0 +1,128 @@
+@import "../general.css";
+
+/* body{
+    text-shadow: 1px 1px black;
+} */
+
+.about-banner{
+    background-image: url("./about.jpg");
+}
+
+.about-banner.overlay{
+    padding: 3rem;
+    text-shadow: 1px 1px black;
+}
+
+.about-title{
+    margin-top: 3rem;
+	margin-left: 6rem;
+}
+
+.overlay>p{
+    width: 80%;
+    margin-left: 10rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: justify;
+    color: #f4da06;
+}
+
+
+
+
+
+.our-team{
+    text-align: center;
+}
+
+.about-team{
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-member>img{
+    height: 10rem;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    box-shadow: 8px 6px 38px black;
+}
+
+.team-member>p{
+    text-align: center;
+    font-weight: bold;
+    color: white
+}
+
+.team-member>span{
+    text-align: center;
+    color: white;
+    width: 100%;
+    display: block;
+}
+
+
+
+.about-social-medias{
+    text-align: center;
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+}
+
+.about-social-medias-container{
+    display: flex;
+	justify-content: space-around;
+	width: 31%;
+	font-size: 2rem;
+}
+
+.about-social-medias-container>i{
+    color: white;
+}
+
+.about-social-medias-container>i:hover{
+    color: #f4da06;
+    cursor: pointer;
+    text-shadow: 1px 1px black;
+}
+
+
+
+
+@media (max-width: 992px){
+    .about-banner{
+        background-size: 183rem;
+        background-position-y: -1rem;
+        background-position-x: -64rem;
+    }
+    .about-team{
+        flex-direction: column;
+    }
+    
+    .team-member{
+        margin-bottom: 3rem;    
+    }
+    
+    .overlay>p{
+        margin: auto;
+    }
+    
+    .about-social-medias-container>i{
+        margin-right: 10px;
+    }
+    
+}
+
+
+@media (max-width: 769px){
+    .about-title{
+        text-align: center;
+        margin-left: auto;
+    }
+    .overlay>p{
+        width: 100%
+    }
+}
+

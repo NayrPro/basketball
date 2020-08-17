@@ -1,0 +1,21 @@
+@import "../general.css";
+
+.error-message{
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.error-message>h1{
+    font-size: 15rem;
+    margin: 0;
+}
+
+.error-message>p{
+    font-size: 6rem;
+    margin: 0;
+}
