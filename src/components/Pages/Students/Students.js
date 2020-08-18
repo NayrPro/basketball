@@ -1,8 +1,22 @@
 import React from 'react'
 import "./students.css"
 import Navbar from '../../Navbar/Navbar'
+import studentsData from "./studentsData"
 
 export default function Students() {
+    /* Stocks the name, the image and the feedback message of each
+        students inside JSX elements */
+    const studentsFeedback = studentsData.map(student => (
+        <React.Fragment key={student.key}>
+        <div className="student-feedback">
+                        <i className="fas fa-quote-left"></i>
+                         <img src={require(`${student.url}`)}  alt={student.name.toLowerCase()}/> 
+                        <p>"{student.paragraph}"</p>
+                        <span>- {student.name} -</span>
+        </div>
+        <hr/>
+        </React.Fragment>
+    ))
     return (
         <React.Fragment>
             <Navbar/>
@@ -13,13 +27,8 @@ export default function Students() {
                     </div>
                 </div>
                 <div className="students-feedback">
-                    <div className="student-feedback">
-                        <i className="fas fa-quote-left"></i>
-                        <img src={require("./images/lorem1.jpg")}  alt="lorem1"/>
-                        <p> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae neque aliquid, odio ipsum eligendi distinctio ut, pariatur esse fugiat ad sequi quisquam quas iusto? Animi modi explicabo, error velit aspernatur similique quidem aut illo voluptas sit ipsam eius repudiandae atque rerum, molestias architecto autem asperiores harum tenetur itaque. Pariatur, veniam!"</p>
-                        <span>- Lorem1 -</span>
-                    </div>
-                    <hr/>   
+                    {/*Displaying each students informations and feedback*/}
+                    {studentsFeedback}
                 </div>
             </div>
         </React.Fragment>

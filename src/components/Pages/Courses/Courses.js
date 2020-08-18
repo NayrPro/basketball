@@ -14,7 +14,7 @@ export default function Courses() {
                 </div>
                 <div className="courses-pages">
                     <div className="courses-pages container">
-                        <label for="page-select">Pages:</label>
+                        <label htmlFor="page-select">Pages:</label>
                         <select name="pages" id="page-select">
                             <option value="">--Pages--</option>
                             <option value="1">1</option>

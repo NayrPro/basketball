@@ -24,7 +24,7 @@
 }
 
 .article-image {
-    background-image: url('./images/article.jpg');
+    display: block;
     background-size: cover;
     width: 80%;
 }
