@@ -16,6 +16,16 @@ body{
 @include equalizeRegular;
 
 
+/*Rules to prevent the fixed Navbar to overlap
+  the content of the page when the scroll is
+  on top*/
+  .courses-container,.videos-container,.students-container,.blog-container{
+    position: absolute; 
+    top: 54px; 
+    width: 100%
+}
+
+
 /* Setting the rules for the banner of all pages
     except error and login pages*/
     @mixin banner($elementBanner, $size, $posY, $posX){

@@ -4,10 +4,10 @@ import Navbar from '../../Navbar/Navbar'
 
 export default function ErrorPage() {
     return (
-        <div class="error-banner">
+        <div className="error-banner">
             <Navbar/>
-            <div class="error-banner overlay">
-                <div class="error-message">
+            <div className="error-banner overlay">
+                <div className="error-message">
                     <h1>404</h1>
                     <p>Page Not Found</p>
                 </div>
