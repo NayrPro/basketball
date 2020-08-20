@@ -13,7 +13,7 @@ const Input = (props) => {
         }
     return (
         <div className="form-control">
-            <label htmlFor={name}>{label} :</label>
+            <label htmlFor={name}>{label}</label>
             <Field 
                 id={name} 
                 name={name}
