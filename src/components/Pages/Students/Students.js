@@ -5,7 +5,7 @@ import studentsData from "./studentsData"
 
 export default function Students() {
     /* Stocks the name, the image and the feedback message of each
-        students inside JSX elements */
+        student inside JSX elements */
     const studentsFeedback = studentsData.map(student => (
         <React.Fragment key={student.key}>
         <div className="student-feedback">
@@ -27,7 +27,7 @@ export default function Students() {
                     </div>
                 </div>
                 <div className="students-feedback">
-                    {/*Displaying each students informations and feedback*/}
+                    {/*Displaying each student's informations and feedback*/}
                     {studentsFeedback}
                 </div>
             </div>

@@ -116,6 +116,10 @@ $elementSizes: (-80rem,-40rem,-20rem,-34rem);
 
 /*Rules of the grid of videos and courses pages*/
 @mixin content-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+
     width: 80%;
     margin: auto;
     margin-top: 5rem;
@@ -124,7 +128,21 @@ $elementSizes: (-80rem,-40rem,-20rem,-34rem);
 .videos-grid, .courses-grid{
     @include content-grid;
 }
-
+@media (max-width: 992px){
+    .videos-grid, .courses-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }   
+}
+@media (max-width: 769px){
+    .videos-grid, .courses-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }   
+}
+@media (max-width: 576px){
+    .videos-grid, .courses-grid{
+        grid-template-columns: none;
+    }   
+}
 
 /*Rules of each elements of the grid*/
 @mixin element-grid($element, $elementProps){
@@ -132,7 +150,7 @@ $elementSizes: (-80rem,-40rem,-20rem,-34rem);
         height: map-get($elementProps, "height");
         border-radius: map-get($elementProps, "border-radius");
         background-color: map-get($elementProps, "background-color");
-        width: 12rem;
+        // width: 12rem;
         border: 1px solid antiquewhite;
         overflow: hidden;
     }

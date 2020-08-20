@@ -3,6 +3,26 @@ import "./courses.css"
 import Navbar from '../../Navbar/Navbar'
 
 export default function Courses() {
+    /* Will contain all the courses element */
+    var courses = []
+
+    function coursesPush(){
+        for(let i = 0; i<45; i++){
+            courses.push(
+                <div className="course">
+                    <img src={require("./course1.jpg")} alt={`course ${i+1}`}/>
+                    <div className="course-description">
+                        <a href="/">Course {i+1}</a>
+                        <hr/>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, voluptatem?</span>
+                    </div>
+                </div>
+            )
+        }
+    } 
+    
+    coursesPush();
+
     return (
         <React.Fragment>
             <Navbar/>
@@ -14,7 +34,6 @@ export default function Courses() {
                 </div>
                 <div className="courses-pages">
                     <div className="courses-pages container">
-                        <label htmlFor="page-select">Pages:</label>
                         <select name="pages" id="page-select">
                             <option value="">--Pages--</option>
                             <option value="1">1</option>
@@ -23,14 +42,7 @@ export default function Courses() {
                         </select>
                     </div>
                     <div className="courses-grid">
-                        <div className="course">
-                            <img src={require("./course1.jpg")} alt="course 1"/>
-                            <div className="course-description">
-                                <a href="/">Course 1</a>
-                                <hr/>
-                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, voluptatem?</span>
-                            </div>
-                        </div>
+                    {courses}
                     </div>
                 </div>
             </div>

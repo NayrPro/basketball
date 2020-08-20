@@ -4,6 +4,8 @@ import Navbar from '../../Navbar/Navbar'
 import blogData from "./blogData"
 
 export default function Blog() {
+    /* Stocks the title, the image and the content of each
+        article inside JSX elements */
     const articles = blogData.map(article => (
         <React.Fragment key={article.key}>
             <div className="article">
@@ -34,6 +36,7 @@ export default function Blog() {
                     </div>
                 </div>
                 <div className="articles">
+                    {/*Displaying each article's content*/}
                     {articles}
                 </div>
             </div>    

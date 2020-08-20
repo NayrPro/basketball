@@ -12,17 +12,24 @@
 }
 
 .courses-pages{
-    margin-top: 5%;
+    margin-top: 5rem;
 }
 
 .courses-pages.container{
-    width: max-content;
-    margin: auto;
+    width: 100%;
+    position: relative;
+    height: 20px;
+}
+
+.courses-pages.container>select{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .course>img{
-	height: 9rem;
-	width: inherit;
+	height: auto;
+	width: 100%;
 }
 
 .course-description>a{

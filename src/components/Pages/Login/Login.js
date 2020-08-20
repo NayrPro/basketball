@@ -1,7 +1,7 @@
 import React from 'react'
 import "./login.css"
 import Navbar from '../../Navbar/Navbar'
-
+import FormikComponent from './Formik/FormikComponent'
 export default function Login() {
     return (
         <div className="login-banner">
@@ -9,6 +9,7 @@ export default function Login() {
             <div className="login-banner overlay">
                 <div className="login-form">
                     <h2>Sign in to our website</h2>
+                    {/* 
                     <form>
                         <div className="form-control">
                             <label for="username">Username or mail adress</label>
@@ -20,7 +21,8 @@ export default function Login() {
                             <input type="text" name="password" id="password"/>
                         </div>
                         <button className="main-form-input submit" type="submit">Login</button>
-                    </form>
+                    </form> */}
+                    <FormikComponent/>
                 </div>
 	        </div>
         </div>
