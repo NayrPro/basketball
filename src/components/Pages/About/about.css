@@ -93,8 +93,11 @@
 
 @media (max-width: 992px){
     .about-banner{
-        background-size: 183rem;
+        /* background-size: 183rem;
         background-position-y: -1rem;
+        background-position-x: -64rem; */
+        background-size: 187rem;
+        background-position-y: 2rem;
         background-position-x: -64rem;
     }
     .about-team{

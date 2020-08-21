@@ -39,7 +39,7 @@
     text-decoration: none;
 }
 
-.video:hover .fas.fa-play{
+.video-thumbnail:hover .fas.fa-play{
     display: none;
 }
 
