@@ -1,7 +1,8 @@
-import React, {useState, useEffect, useRef} from 'react'
-import 'aos/dist/aos.css'
-import AOS from 'aos'
+import React, {useState, useRef} from 'react'
+import {useSelector} from 'react-redux'
+
 export default function Info() {
+    
     
     // The positions in the X and Y axis of the cursor are declared
     const [posX, setPosX] = useState();
@@ -9,30 +10,25 @@ export default function Info() {
     
     //Reference of the info container
     const mainInfo = useRef();
-
-    useEffect(() => {
-        /*Initialisation of AOS in order to make
-        the container slide to the left when it's 
-         scrolled on*/
-        AOS.init({
-            duration : 1000
-        });
-
-    }, [])
     
     /*Each time the mouse moves on the container,
-      that function will take it's current position and apply
-     the flash effect on the container based on it*/
+    that function will take it's current position and apply
+    the flash effect on the container based on it*/
     function handleMove(e){
         setPosX(e.clientX+"px");
         setPosY(e.clientY+"px");
         mainInfo.current.style.setProperty('--cursorX', posX);
         mainInfo.current.style.setProperty('--cursorY', posY);
     }
+    
+    /** Bringing the state windowSize from windowSizeReducer to apply 
+        or not aos animation on main-info depending on its value */
+    const {windowSize} = useSelector(state => ({...state.windowSizeReducer}))
+    
     return (
         <div 
             className="main-info" 
-            data-aos="slide-left" data-aos-anchor-placement="bottom" 
+            data-aos = {windowSize > 992 ? "zoom-in" : ""}
             ref={mainInfo}
             onMouseMove={handleMove}
         >

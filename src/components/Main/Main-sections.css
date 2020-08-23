@@ -3,15 +3,13 @@
     width: 37.5rem;
     height: 31.898rem;
     
-    margin: 0;
+    margin: auto;
     margin-bottom: 3rem;
     
     overflow: hidden;   
     border-radius: 9%;
 
     position: relative;
-	left: 50%;
-	transform: translateX(-50%);
 }
 
 
@@ -95,7 +93,6 @@
     opacity: 0.5;
     cursor: pointer;
 }
-
 
 @media (max-width: 576px) {
 	.main-sections {

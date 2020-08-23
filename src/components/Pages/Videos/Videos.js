@@ -8,7 +8,7 @@ export default function Videos() {
     /* Stocks the title and the images of each
         video inside JSX elements */
     const videos = videosData.map(video => (
-        <div className="video">
+        <div className="video" key={video.key}>
                         <a href="/" className="video-thumbnail">
                         <img 
                         src= {require(`${video.urlImg}`)}

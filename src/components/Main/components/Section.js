@@ -1,4 +1,5 @@
 import React, {useState, useRef} from 'react'
+import {useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
 
 export default function Section() {
@@ -7,7 +8,7 @@ export default function Section() {
     const [opacity, setOpacity] = useState(0);
     const [transitionDuration, setTransitionDuration] = useState("1.5s");
     const [transitionDelay, setTransitionDelay] = useState("0.5s");
-    const [page, setPage] = useState();
+    const [page, setPage] = useState("/");
 
     // References of each side of the container
     const front = useRef();
@@ -81,8 +82,16 @@ export default function Section() {
          back side*/
         !e.target.id.includes("info") && imgChange(e); 
     }
+
+    /** Bringing the state windowSize from windowSizeReducer to apply 
+        or not aos animation on main-sections depending on its value */
+    const {windowSize} = useSelector(state => ({...state.windowSizeReducer}))
+
     return (
-        <div className="main-sections">
+        <div 
+            className="main-sections"
+            data-aos = {windowSize > 992 ? "fade-up" : ""}
+        >
                 <div 
                     className="main-sections-front" 
                     id="front"

@@ -1,9 +1,16 @@
 import React from 'react'
+import {useSelector} from 'react-redux'
 import './Footer.css'
 
 export default function Footer() {
+    /** Bringing the state windowSize from windowSizeReducer to apply 
+        or not aos animation on footer depending on its value */
+    const {windowSize} = useSelector(state => ({...state.windowSizeReducer}))
     return (
-        <div className="footer">
+        <div 
+            className="footer"
+            data-aos = {windowSize > 992 ? "fade-in" : ""}
+        >
             <h1 className="footer-title">Footer</h1>
             <div className="footer-lists">
                 <ul>
