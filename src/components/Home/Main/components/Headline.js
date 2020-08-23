@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Home() {
+export default function Headline() {
     return (
         <React.Fragment>
             <h1 className="main-title">LOREM IPSUM DOLOR!</h1>

@@ -1,21 +1,17 @@
 import React from 'react'
 import {Formik, Form} from 'formik'
 import * as Yup from 'yup'
-import Input from "./Input"
+import Input from "../../Formik/Input"
 
 export default function FormikComponent() {
 
     const InitialValues = {
-        firstname: '',
-        lastname: '',
-        email: '',
+        username: '',
         password: '',
     }
     
     const validationSchema = Yup.object({
-        firstname: Yup.string().required("Your firstname is required"),
-        lastname: Yup.string().required("Your lastname is required"),
-        email: Yup.string().email("Invalid email format").required("Your e-mail is required"),
+        username: Yup.string().required("Your firstname is required"),
         password: Yup.string().required("Enter a password")
     })
 
@@ -31,24 +27,10 @@ export default function FormikComponent() {
                 <Form>
                     <Input 
                         type="text" 
-                        label="Firstname" 
-                        name="firstname"
-                        error={formik.errors.firstname}
-                        touched={formik.touched.firstname}
-                    />
-                    <Input 
-                        type="text" 
-                        label="Lastname" 
-                        name="lastname"
-                        error={formik.errors.lastname}
-                        touched={formik.touched.lastname}
-                    />
-                    <Input 
-                        type="email" 
-                        label="Email" 
-                        name="email"
-                        error={formik.errors.email}
-                        touched={formik.touched.email}
+                        label="Username or email" 
+                        name="username"
+                        error={formik.errors.username}
+                        touched={formik.touched.username}
                     />
                     
                     <Input 

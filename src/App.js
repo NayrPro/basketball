@@ -1,7 +1,7 @@
 import React, {useEffect, useCallback} from 'react'
 import {useDispatch} from 'react-redux'
 import './App.css';
-import Home from './components/Home'
+import Home from './components/Home/Home'
 import Courses from './components/Pages/Courses/Courses' 
 import Students from './components/Pages/Students/Students'
 import Videos from './components/Pages/Videos/Videos'

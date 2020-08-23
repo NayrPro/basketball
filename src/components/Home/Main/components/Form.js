@@ -1,6 +1,6 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
-import FormikComponent from "./Formik/FormikComponent"
+import FormikComponent from "./FormikComponent"
 export default function Form() {
     /** Bringing the state windowSize from windowSizeReducer to apply 
         or not aos animation on main-form depending on its value */

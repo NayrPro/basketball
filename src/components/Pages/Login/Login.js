@@ -1,7 +1,7 @@
 import React from 'react'
 import "./login.css"
 import Navbar from '../../Navbar/Navbar'
-import FormikComponent from './Formik/FormikComponent'
+import FormikComponent from './FormikComponent'
 export default function Login() {
     return (
         <div className="login-banner">
