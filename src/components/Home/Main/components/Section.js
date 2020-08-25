@@ -18,14 +18,14 @@ export default function Section() {
     const courses = useRef();
     const students = useRef();
     const videos = useRef();
-    const blog = useRef();
+    const news = useRef();
 
     // This constant contains the title for each images that will be clicked on    
     const Headings = {
         courses : "Follow our Courses", 
         students : "Read our students' feeback", 
         videos : "Watch our videos", 
-        blog : "Read our blog"
+        news : "Read the latest news"
     };
 
     /* The function flips the image container
@@ -112,10 +112,10 @@ export default function Section() {
                          onClick={handleClick}
                          ref={videos}
                     ></div>
-	                <div className="main-section blog" 
-                         id="blog"
+	                <div className="main-section news" 
+                         id="news"
                          onClick={handleClick}
-                         ref={blog}
+                         ref={news}
                     ></div>
                 </div>
                 <div className="main-sections-back" 

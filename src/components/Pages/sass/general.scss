@@ -19,7 +19,7 @@ body{
 /*Rules to prevent the fixed Navbar to overlap
   the content of the page when the scroll is
   on top*/
-  .courses-container,.videos-container,.students-container,.blog-container{
+  .courses-container,.videos-container,.students-container,.news-container{
     position: absolute; 
     top: 54px; 
     width: 100%
@@ -40,14 +40,14 @@ body{
         }
     }
 }
-$elementsBanner : (".blog-banner", ".courses-banner", ".videos-banner", ".students-banner", ".about-banner");
+$elementsBanner : (".news-banner", ".courses-banner", ".videos-banner", ".students-banner", ".about-banner");
 $positionsY : (-23rem,-8rem,-25rem, none, -8rem);
 $positionsX : (0rem, -21rem, 0rem, none, -10rem);
 $sizes : (88rem, inherit, 86rem, cover, 107rem);
 @for $i from 1 through 5 {
     @include banner(list.nth($elementsBanner,$i),list.nth($sizes,$i),list.nth($positionsY,$i),list.nth($positionsX,$i))
 }
-.blog-banner, .courses-banner, .videos-banner, .students-banner, .about-banner{
+.news-banner, .courses-banner, .videos-banner, .students-banner, .about-banner{
     background-repeat: no-repeat;
     width: inherit;
     overflow: hidden;
@@ -61,7 +61,7 @@ $sizes : (88rem, inherit, 86rem, cover, 107rem);
     height: inherit;
     width: inherit;
 }
-.about-banner.overlay,.blog-banner.overlay,.courses-banner.overlay,
+.about-banner.overlay,.news-banner.overlay,.courses-banner.overlay,
 .error-banner.overlay,.login-banner.overlay,.students-banner.overlay,
 .videos-banner.overlay{
     @include banner-overlay;
@@ -78,7 +78,7 @@ $sizes : (88rem, inherit, 86rem, cover, 107rem);
     left: 2rem;
 }
 .courses-banner.overlay,.students-banner.overlay,.videos-banner.overlay,
-.blog-banner.overlay{
+.news-banner.overlay{
     h2{
         @include banner-overlay-heading;
     }
@@ -92,7 +92,7 @@ $sizes : (88rem, inherit, 86rem, cover, 107rem);
     color: #ffe40a;
 }
 .courses-banner.overlay,.students-banner.overlay,.videos-banner.overlay,
-.blog-banner.overlay,.about-banner.overlay{
+.news-banner.overlay,.about-banner.overlay{
     h2{
         @include banner-overlay-heading-font;
     }
@@ -105,7 +105,7 @@ $sizes : (88rem, inherit, 86rem, cover, 107rem);
         background-position-x: $position-x;
     }
 }
-$elementsBannerResize : (".about-banner",".courses-banner", ".videos-banner", ".blog-banner");
+$elementsBannerResize : (".about-banner",".courses-banner", ".videos-banner", ".news-banner");
 $elementSizes: (-80rem,-40rem,-20rem,-34rem);            
 @media (max-width: 769px){
     @for $i from 1 through 4 {

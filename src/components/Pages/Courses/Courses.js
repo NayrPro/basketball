@@ -11,7 +11,9 @@ export default function Courses() {
 
     function coursesPush(page){
         var array = []
-        for(let i = ((page*15)-14); i<=(page*15); i++){
+        var j = 15
+        var k = j-1
+        for(let i = ((page*j)-k); i<=(page*j); i++){
             array.push(
                 <div className="course" key={i}>
                     <img src={require("./course1.jpg")} alt={`course ${i}`}/>
@@ -32,8 +34,7 @@ export default function Courses() {
 
     function handleChange(e){
         const value = e.target.value
-        setPage(value)
-        console.log(page);
+        value !== "" && setPage(value)
     }
 
     return (
@@ -47,8 +48,8 @@ export default function Courses() {
                 </div>
                 <div className="courses-pages">
                     <div className="courses-pages container">
-                        <select name="pages" id="page-select" onChange={(e) => handleChange(e)} value={page}>
-                            {/* <label>--Pages--</label> */}
+                        <select name="pages" id="page-select" onChange={(e) => handleChange(e)}>
+                            <option value="">-- Pages ---</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
