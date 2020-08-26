@@ -1,0 +1,76 @@
+.main-form, .login-form{
+    margin: auto;
+    margin-bottom: 11rem;
+    padding: 2rem;
+    padding-bottom: 0;
+
+    background-color: #ffcb00;
+    color:#0d0e0f;    
+    font-weight: bold;
+}
+
+.main-form>h2, .login-form>h2{
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+
+    font-family: OldSportAthletic;
+    text-align: center;
+    font-size: 2rem;	
+}
+
+.main-form> form{
+    display: flex;
+    flex-direction: column;
+    margin : auto;
+    padding: 2rem;
+    border: 5px solid black;
+    padding-bottom: 1rem;
+    border-bottom: none;
+}
+
+.form-control{
+    margin-bottom: 1rem;
+}
+
+.form-control>label{
+    font-family: OldSportAthletic;
+    font-size: 22px;
+}
+
+.form-control>input{
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 1%;
+}
+
+.form-control>span{
+    color: red;
+    float: right;
+    font-weight: normal;
+}
+
+.submit, .submit-no-hover{
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    border: 3px solid black;
+    position: relative;
+    top: 0rem;
+    border-radius: 2%;
+    text-align: center;
+    cursor: pointer;
+    font-family: OldSportAthletic;
+    font-size: 21px;
+    padding: 15px 32px;
+    background-color: #ffcc00;
+    font-weight: bold;
+}
+
+.submit:hover{
+    background: #c1c0c1;
+    color: #d8691e;
+    border-color: #d8691e;
+}

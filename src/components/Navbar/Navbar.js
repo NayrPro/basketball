@@ -9,7 +9,6 @@ export default function Navbar(){
     const [background, setBackground] = useState("");
     const [color, setColor] = useState("#9d9393");
 
-    /** Should this event be in a reducer??? */
     useEffect(() => {
       function resize(){
         setWindowWidth(window.innerWidth)

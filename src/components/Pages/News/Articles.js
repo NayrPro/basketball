@@ -47,26 +47,36 @@ export default function Articles() {
 
     return (
         <React.Fragment>
-            {articles.map(article => (
-                <React.Fragment key={article.key}>
-                    <div className="article">
-                        <div className="article-image"
-                            style={{backgroundImage: `url(${article.image})`}}>
-                        </div>
-                        <div className="article-description">
-                            <div className="article-heading">
-                                <a href={article.link}>{article.title}</a>
-                                <span>{article.pubDate}</span>
-                            </div>
-                            <hr/>
-                            <div className="article-content">
-                                <p>{article.description} [...]</p>
-                                <a href={article.link}>Read More</a>
-                            </div>
-                        </div>
+            {   /* The component will display either a loading message or the articles depending on the content of "articles" */
+                articles.length === 0 ? 
+
+                    <div className="lds-roller">
+                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                        <span>loading</span>
                     </div>
-                </React.Fragment>
-            ))}
+
+                    :
+
+                    articles.map(article => (
+                        <React.Fragment key={article.key}>
+                            <div className="article">
+                                <div className="article-image"
+                                    style={{backgroundImage: `url(${article.image})`}}>
+                                </div>
+                                <div className="article-description">
+                                    <div className="article-heading">
+                                        <a href={article.link}>{article.title}</a>
+                                        <span>{article.pubDate}</span>
+                                    </div>
+                                    <hr/>
+                                    <div className="article-content">
+                                        <p>{article.description} [...]</p>
+                                        <a href={article.link}>Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </React.Fragment>
+                    ))}
         </React.Fragment>
     )
 }
