@@ -1,6 +1,5 @@
 import React from 'react'
 import "./login.css"
-import Navbar from '../../Navbar/Navbar'
 import * as Yup from 'yup'
 import FormikComponent from "../../Formik/FormikComponent"
 
@@ -11,7 +10,7 @@ export default function Login() {
     const InitialValues = {
         username: '',
         password: '',
-    }
+    } 
     
     const validationSchema = Yup.object({
         username: Yup.string().required("Username or email required"),
@@ -24,7 +23,6 @@ export default function Login() {
 
     return (
         <div className="login-banner">
-            <Navbar/>
             <div className="login-banner overlay">
                 <div className="login-form">
                     <h2>Sign in to our website</h2>

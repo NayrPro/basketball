@@ -1,6 +1,5 @@
 import React from 'react'
 import "./videos.css"
-import Navbar from '../../Navbar/Navbar'
 import videosData from './videosData'
 
 export default function Videos() {
@@ -24,7 +23,6 @@ export default function Videos() {
     ))
     return (
         <React.Fragment>
-            <Navbar/>
             <div className="courses-container">
                 <div className="videos-banner">
                     <div className="videos-banner overlay">
@@ -33,7 +31,7 @@ export default function Videos() {
                 </div>
                 <div className="videos-grid">
                     {/*Displaying each video's infos*/}
-                    {videos}
+                    {videos} 
                 </div>
             </div>
         </React.Fragment>

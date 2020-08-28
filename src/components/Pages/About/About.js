@@ -1,10 +1,8 @@
 import React from 'react'
 import "./about.css"
-import Navbar from '../../Navbar/Navbar'
-export default function About() {
+export default function About() { 
     return (
         <div className="about-banner">
-            <Navbar/>
             <div className="about-banner overlay">
                 <h2 className="about-title">ABOUT</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa beatae sapiente odit enim labore doloremque aperiam iure blanditiis, nihil corrupti provident corporis at deleniti ratione recusandae omnis ea necessitatibus alias perferendis quasi! Exercitationem molestiae iusto facere commodi? Enim veniam explicabo et ut, alias, deserunt corrupti neque fugit libero recusandae ullam nobis nisi molestias incidunt mollitia placeat eos fugiat repudiandae quos nihil!</p>

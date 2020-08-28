@@ -1,6 +1,5 @@
 import React from 'react'
 import "./students.css"
-import Navbar from '../../Navbar/Navbar'
 import studentsData from "./studentsData"
 
 export default function Students() {
@@ -14,12 +13,11 @@ export default function Students() {
                         <p>"{student.paragraph}"</p>
                         <span>- {student.name} -</span>
         </div>
-        <hr/>
+        <hr/> 
         </React.Fragment>
     ))
     return (
         <React.Fragment>
-            <Navbar/>
             <div className="students-container">
                 <div className="students-banner">
                     <div className="students-banner overlay">

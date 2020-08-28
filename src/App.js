@@ -9,6 +9,7 @@ import News from './components/Pages/News/News'
 import About from './components/Pages/About/About'
 import Login from './components/Pages/Login/Login'
 import ErrorPage from './components/Pages/ErrorPage/ErrorPage'
+import Navbar from './Navbar/Navbar'
 import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
@@ -46,6 +47,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Navbar/>
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/Courses" component={Courses}/>

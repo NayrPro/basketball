@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import "./courses.css"
-import Navbar from '../../Navbar/Navbar'
 import {Link} from "react-router-dom"
-
+ 
 export default function Courses() {
     const [page, setPage] = useState(1)
 
@@ -39,7 +38,6 @@ export default function Courses() {
 
     return (
         <React.Fragment>
-            <Navbar/>
             <div className="courses-container">
                 <div className="courses-banner">
                     <div className="courses-banner overlay">

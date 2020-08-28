@@ -50,10 +50,10 @@ body{
 	color: #9d9393;
 }
 
-.navbar-link.home{
+/* .navbar-link.home{
    color: #f1f1f1;
    background: #4b4848;
-}
+} */
 
 .navbar-link.menu>a{
   text-decoration: none;
