@@ -50,11 +50,6 @@ body{
 	color: #9d9393;
 }
 
-/* .navbar-link.home{
-   color: #f1f1f1;
-   background: #4b4848;
-} */
-
 .navbar-link.active , .menu-list>a:active{
   color: #f1f1f1;
   background: #4b4848;
