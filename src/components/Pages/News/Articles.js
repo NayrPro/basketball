@@ -7,7 +7,7 @@ export default function Articles() {
     
     /* Retreive data from an RSS feed and put it on "articles"*/
     useEffect(() => {
-        const fetchData = async() => {
+        const fetchData = () => {
             
             const newsData = [];
             
