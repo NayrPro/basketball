@@ -55,6 +55,12 @@ body{
    background: #4b4848;
 } */
 
+.navbar-link.active , .menu-list>a:active{
+  color: #f1f1f1;
+  background: #4b4848;
+  outline: none;
+}
+
 .navbar-link.menu>a{
   text-decoration: none;
   color: #9d9393;

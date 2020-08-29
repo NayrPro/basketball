@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './Navbar.css'
 import {Link} from 'react-router-dom'
 
-export default function Navbar(){
+export default function Navbar(props){
   // Depending on the window size some elements will change or not
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [display, setDisplay] = useState("none");
@@ -44,7 +44,7 @@ export default function Navbar(){
         </div>
           <div className="navbar-links">
             <React.Fragment>
-            <Link className="navbar-link home" to="/">
+            <Link className={"navbar-link home " + props.active["home"]} to="/">
             { windowWidth > 768 ? "Home" : <i className="fas fa-home"></i>}
             </Link>
 
@@ -80,7 +80,7 @@ export default function Navbar(){
                 </div>
 
               </div>
-              <Link to="/login" className="navbar-link">
+              <Link to="/login" className={"navbar-link " + props.active["login"]}>
               { windowWidth > 768 ? "Login" : <i className="fa fa-user" ></i>}
               </Link>
             </React.Fragment>

@@ -1,4 +1,4 @@
-import React, {useEffect, useCallback} from 'react'
+import React, {useEffect, useCallback, useState} from 'react'
 import {useDispatch} from 'react-redux'
 import './App.css';
 import Home from './components/Home/Home'
@@ -10,7 +10,7 @@ import About from './components/Pages/About/About'
 import Login from './components/Pages/Login/Login'
 import ErrorPage from './components/Pages/ErrorPage/ErrorPage'
 import Navbar from './Navbar/Navbar'
-import {HashRouter as Router, Route, Switch} from 'react-router-dom'
+import {Route, Switch, useLocation} from 'react-router-dom'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 
@@ -43,11 +43,31 @@ function App() {
     });
     
   }, [])
+  const [active, setActive] = useState({ home: "", login: ""})
+  let location = useLocation()
+  useEffect(() => {
+    // console.log(location, "location");
+    const pathname = location.pathname === "/" ? "home" : "login"
+    const emptedValues = { home: "", login: ""}
+    if(location.pathname === "/" || location.pathname === "/login"){
+      setActive({
+        ...emptedValues,
+        [pathname] : "active"
+      })
+    }else{
+      setActive({
+        ...emptedValues
+      })
+    }
+  }, [location])
+  
+  useEffect(() => {
+    console.log(active);
+  },)
 
   return (
-    <Router>
       <div className="App">
-        <Navbar/>
+        <Navbar active={active}/>
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/Courses" component={Courses}/>
@@ -59,7 +79,6 @@ function App() {
           <Route component={ErrorPage}/>
         </Switch>
       </div>
-    </Router>
   );
 }
 

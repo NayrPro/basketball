@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import {createStore, combineReducers} from 'redux'
 import windowSizeReducer from './Store/windowSizeReducer'
 import {Provider} from 'react-redux'
+import {HashRouter as Router} from "react-router-dom"
 
 const rootReducer = combineReducers({
   windowSizeReducer
@@ -15,7 +16,9 @@ const store = createStore(rootReducer)
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
