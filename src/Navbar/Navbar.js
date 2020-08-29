@@ -44,7 +44,7 @@ export default function Navbar(props){
         </div>
           <div className="navbar-links">
             <React.Fragment>
-            <Link className={"navbar-link home " + props.active["home"]} to="/">
+            <Link className={"navbar-link home " + props.active["home"]} to="/" replace>
             { windowWidth > 768 ? "Home" : <i className="fas fa-home"></i>}
             </Link>
 
@@ -72,15 +72,15 @@ export default function Navbar(props){
                 }
                 
                 <div className="menu-list" style={{display: display}}>
-                    <Link to="/courses">Courses</Link><hr/>
-                    <Link to="/students">Students</Link><hr/>
-                    <Link to="/videos">Videos</Link><hr/>
-                    <Link to="/News">News</Link><hr/>
-                    <Link to="/about">About</Link>
+                    <Link to="/courses" replace>Courses</Link><hr/>
+                    <Link to="/students" replace>Students</Link><hr/>
+                    <Link to="/videos" replace>Videos</Link><hr/>
+                    <Link to="/News" replace>News</Link><hr/>
+                    <Link to="/about" replace>About</Link>
                 </div>
 
               </div>
-              <Link to="/login" className={"navbar-link " + props.active["login"]}>
+              <Link to="/login" className={"navbar-link " + props.active["login"]} replace>
               { windowWidth > 768 ? "Login" : <i className="fa fa-user" ></i>}
               </Link>
             </React.Fragment>

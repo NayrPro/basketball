@@ -45,8 +45,9 @@ function App() {
   }, [])
   const [active, setActive] = useState({ home: "", login: ""})
   let location = useLocation()
+
+  // Indicates the clicked navbar item that should be hilighted
   useEffect(() => {
-    // console.log(location, "location");
     const pathname = location.pathname === "/" ? "home" : "login"
     const emptedValues = { home: "", login: ""}
     if(location.pathname === "/" || location.pathname === "/login"){
@@ -60,10 +61,6 @@ function App() {
       })
     }
   }, [location])
-  
-  useEffect(() => {
-    console.log(active);
-  },)
 
   return (
       <div className="App">
