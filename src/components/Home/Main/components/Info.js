@@ -7,7 +7,7 @@ export default function Info() {
     // The positions in the X and Y axis of the cursor are declared
     const [posX, setPosX] = useState();
     const [posY, setPosY] = useState();
-    
+     
     //Reference of the info container
     const mainInfo = useRef();
     
@@ -23,8 +23,8 @@ export default function Info() {
     
     /** Bringing the state windowSize from windowSizeReducer to apply 
         or not aos animation on main-info depending on its value */
-    const {windowSize} = useSelector(state => ({...state.windowSizeReducer}))
-    
+    const windowSize = useSelector(state => state.windowSize)
+     
     return (
         <div 
             className="main-info" 

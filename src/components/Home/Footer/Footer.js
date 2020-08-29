@@ -5,7 +5,7 @@ import './Footer.css'
 export default function Footer() {
     /** Bringing the state windowSize from windowSizeReducer to apply 
         or not aos animation on footer depending on its value */
-    const {windowSize} = useSelector(state => ({...state.windowSizeReducer}))
+    const windowSize = useSelector(state => state.windowSize) 
     return (
         <div 
             className="footer"

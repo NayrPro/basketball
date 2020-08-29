@@ -20,19 +20,19 @@ export default function Form() {
         email: Yup.string().email("Invalid email format").required("Your e-mail is required"),
         password: Yup.string().required("Enter a password")
     })
-
+ 
     const onSubmit = values =>{
          console.log('Form data', values)
     }
 
     /** Bringing the state windowSize from windowSizeReducer to apply 
         or not aos animation on main-form depending on its value */
-    const {windowSize} = useSelector(state => ({...state.windowSizeReducer}))
+    const windowSize = useSelector(state => state.windowSize)
 
     return (
         <div 
-          className="main-form"
-          data-aos = {windowSize > 992 ? "fade-up" : ""}
+          className="main-form" 
+          data-aos = {windowSize > 992 ? "fade-in" : ""}
         >
                 <h2>Suscribe to our mailing list!</h2>
                 

@@ -60,7 +60,7 @@ export default function Section() {
             //page will receive the name of the page that
             //will correspond to the link in the description
             setPage("/"+title);
-            
+             
         }else{ // The rotation will show the gallery of images and hide the back side
         
             transformFront = "perspective(600px) rotateY(0deg)";
@@ -85,12 +85,12 @@ export default function Section() {
 
     /** Bringing the state windowSize from windowSizeReducer to apply 
         or not aos animation on main-sections depending on its value */
-    const {windowSize} = useSelector(state => ({...state.windowSizeReducer}))
+    const windowSize = useSelector(state => state.windowSize)
 
     return (
         <div 
             className="main-sections"
-            data-aos = {windowSize > 992 ? "fade-up" : ""}
+            data-aos = {windowSize > 992 ? "fade-in" : ""}
         >
                 <div 
                     className="main-sections-front" 
@@ -98,7 +98,7 @@ export default function Section() {
                     ref={front}
                 >
                     <div className="main-section courses" 
-                         id="courses"
+                         id="courses" 
                          onClick={handleClick}
                          ref={courses}
                     ></div>
