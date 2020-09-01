@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {createStore} from 'redux'
+import {createStore, combineReducers} from 'redux'
 import windowSizeReducer from './Store/windowSizeReducer'
+import videoReducer from './Store/videoReducer'
 import {Provider} from 'react-redux'
 import {HashRouter as Router} from "react-router-dom"
 
-const store = createStore(windowSizeReducer)
+const rootReducer = combineReducers({
+  windowSizeReducer, videoReducer
+})
+
+const store = createStore(rootReducer)
 
 ReactDOM.render(
   <React.StrictMode>

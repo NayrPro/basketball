@@ -1,21 +1,31 @@
-import React, {useState} from 'react'
+import React from 'react'
 import "./videos.css"
 import videosData from './videosData'
+import VideoOverlay from "./VideoOverlay"
+import {useDispatch, useSelector} from "react-redux"
 
 export default function Videos() {
 
-    /* To show or hide the specific video clicked on */
-    
-    const [display, setDisplay] = useState("none")
-    const [url, setUrl] = useState("")
-    const [autoplay, setAutoplay] = useState("") // Pauses the video when you quit it
-    const [index, setIndex] = useState(0) // Allows us to get access to a video based on his index in videosData
+    const dispatch = useDispatch()
+    const {display} = useSelector(state => ({...state.videoReducer}))
     
     function videoModal(urlValue, keyValue){
-        setIndex(keyValue-1)
-        setAutoplay("")
-        setDisplay("block") 
-        setUrl(urlValue)
+        dispatch({
+            type: "INDEX",
+            payload: keyValue-1
+        })
+        dispatch({
+            type: "AUTOPLAY",
+            payload: ""
+        })
+        dispatch({
+            type: "DISPLAY",
+            payload: "block"
+        })
+        dispatch({
+            type: "URL",
+            payload: urlValue
+        })
     }
 
     /* Stocks the title and the images of each
@@ -47,48 +57,13 @@ export default function Videos() {
         </div>
     ))
     
+
+
     return (
         <React.Fragment>
-            <div className="video-overlay" style={{display: display}}>
-                <i 
-                    className="fas fa-times" 
-                    onClick={() => {
-                        setDisplay("none")
-                        setAutoplay("?autoplay=0")
-                    }}
-                ></i>
-                <iframe 
-                    title="video" 
-                    width="800" 
-                    height="506" 
-                    src={"https://www.youtube.com/embed/"+url+autoplay} 
-                    frameBorder="0" 
-                    allowFullScreen={true}
-                >
-                </iframe>
-                <div className="chevron">
-                    <i 
-                        className={index <= 0 ? "fas fa-chevron-left arrow-transparent" : "fas fa-chevron-left"} 
-                        aria-hidden="true"
-                        onClick={() => {
-                            if(index > 0){
-                                setUrl(videosData[index-1].url) 
-                                setIndex(index-1)
-                            }
-                        }}
-                    ></i>
-                    <i 
-                        className={index < videosData.length-1 ? "fas fa-chevron-right" : "fas fa-chevron-right arrow-transparent"}
-                         aria-hidden="true"
-                         onClick={() => {
-                            if(index < videosData.length-1){ 
-                                setUrl(videosData[index+1].url)
-                                setIndex(index+1)
-                            }
-                        }}
-                    ></i>
-                </div>
-            </div>
+
+            <VideoOverlay videosData={videosData}/>
+            
             <div className="courses-container" style={{opacity: display === "block" ? "0.5" : "1"}}>
                 <div className="videos-banner">
                     <div className="videos-banner overlay">

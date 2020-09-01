@@ -27,7 +27,7 @@ export default function Form() {
 
     /** Bringing the state windowSize from windowSizeReducer to apply 
         or not aos animation on main-form depending on its value */
-    const windowSize = useSelector(state => state.windowSize)
+    const {windowSize} = useSelector(state => ({...state.windowSizeReducer})) 
 
     return (
         <div 

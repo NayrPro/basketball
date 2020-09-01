@@ -23,7 +23,7 @@ export default function Info() {
     
     /** Bringing the state windowSize from windowSizeReducer to apply 
         or not aos animation on main-info depending on its value */
-    const windowSize = useSelector(state => state.windowSize)
+    const {windowSize} = useSelector(state => ({...state.windowSizeReducer})) 
      
     return (
         <div 
