@@ -28,6 +28,37 @@ export default function VideoOverlay(props) {
         })
     }
     
+    const arrowsValues = [
+        {
+            key: 1,
+            indexLimit : 0,
+            condition1 : "fas fa-chevron-left arrow-transparent", 
+            condition2 : "fas fa-chevron-left",
+            nextIndex: (index-1)
+        }, 
+        {
+            key: 2,
+            indexLimit : props.videosData.length-1,
+            condition1 : "fas fa-chevron-right arrow-transparent",
+            condition2 : "fas fa-chevron-right",
+            nextIndex: (index+1)
+        }
+    ]
+    
+    const arrows = arrowsValues.map(arrow => 
+        <i 
+            key={arrow.key}
+            className={index === arrow.indexLimit ? arrow.condition1 : arrow.condition2}
+            aria-hidden="true"
+            onClick={() => {
+                if(index === arrow.indexLimit){
+                    return
+                }
+                changeVideo(arrow.nextIndex)
+            }}
+        ></i>
+    )
+
     return (
         <div className="video-overlay" style={{display: display}}>
                 <i 
@@ -46,24 +77,7 @@ export default function VideoOverlay(props) {
                 >
                 </iframe>
                 <div className="chevron">
-                    <i 
-                        className={index <= 0 ? "fas fa-chevron-left arrow-transparent" : "fas fa-chevron-left"} 
-                        aria-hidden="true"
-                        onClick={() => {
-                            if(index > 0){
-                                changeVideo(index-1)
-                            }
-                        }}
-                    ></i>
-                    <i 
-                        className={index < props.videosData.length-1 ? "fas fa-chevron-right" : "fas fa-chevron-right arrow-transparent"}
-                         aria-hidden="true"
-                         onClick={() => {
-                            if(index < props.videosData.length-1){ 
-                                changeVideo(index+1)
-                            }
-                        }}
-                    ></i>
+                    {arrows}
                 </div>
         </div>
     )
