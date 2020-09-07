@@ -72,3 +72,9 @@
           background: radial-gradient(circle 30vmax at var(--cursorX) var(--cursorY), rgba(0, 0, 0, 0), black);
     }
   }
+
+  @media (max-width: 420px){
+    .main-info-content > h2 {
+        font-size: 2rem;
+    }
+  }

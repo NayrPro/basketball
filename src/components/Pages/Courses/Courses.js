@@ -1,12 +1,22 @@
 import React, {useState, useEffect} from 'react'
 import "./courses.css"
-import {Link} from "react-router-dom"
- 
+import Course from './Course'
+import {useSelector, useDispatch} from "react-redux"
+
 export default function Courses() {
     const [page, setPage] = useState(1)
+    const {elt} = useSelector(state => ({...state.coursesEltReducer})) 
+    const dispatch = useDispatch() 
 
     /* Will contain all the courses element */
     const [courses, setCourses] = useState()
+
+    function goToCourse(number){
+        dispatch({
+            type:"ELT",
+            payload: number
+        })
+    }
 
     function coursesPush(page){
         var array = []
@@ -15,9 +25,20 @@ export default function Courses() {
         for(let i = ((page*j)-k); i<=(page*j); i++){
             array.push(
                 <div className="course" key={i}>
-                    <img src={require("./course1.jpg")} alt={`course ${i}`}/>
+                    <img 
+                        src={require("./course1.jpg")}
+                        onClick={() => goToCourse(i)} 
+                        alt={`course ${i}`}
+                    />
                     <div className="course-description">
-                        <Link to={`/Courses/${i}`}>Course {i}</Link>
+                        <a 
+                           href="/"
+                           onClick={(e) =>{ 
+                             e.preventDefault() 
+                             goToCourse(i)  
+                        }}>
+                            Course {i}
+                        </a>
                         <hr/>
                         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, voluptatem?</span>
                     </div>
@@ -29,6 +50,7 @@ export default function Courses() {
     
     useEffect(() => {
         coursesPush(page)
+        // eslint-disable-next-line
     }, [page])
 
     function handleChange(e){
@@ -38,26 +60,30 @@ export default function Courses() {
 
     return (
         <React.Fragment>
-            <div className="courses-container">
-                <div className="courses-banner">
-                    <div className="courses-banner overlay">
-                        <h2>Courses</h2>
+            { elt === 0 ?
+                <div className="courses-container">
+                    <div className="courses-banner">
+                        <div className="courses-banner overlay">
+                            <h2>Courses</h2>
+                        </div>
                     </div>
-                </div>
-                <div className="courses-pages">
-                    <div className="courses-pages container">
-                        <select name="pages" id="page-select" onChange={(e) => handleChange(e)}>
-                            <option value="">-- Pages ---</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
+                    <div className="courses-pages">
+                        <div className="courses-pages container">
+                            <select name="pages" id="page-select" onChange={(e) => handleChange(e)}>
+                                <option value="">-- Pages ---</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div className="courses-grid">
+                            {courses}
+                        </div>
                     </div>
-                    <div className="courses-grid">
-                    {courses}
-                    </div>
-                </div>
-            </div>
+                </div> 
+                :
+                <Course/>
+            }
         </React.Fragment>
     )
 }

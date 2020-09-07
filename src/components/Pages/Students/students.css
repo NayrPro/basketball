@@ -62,4 +62,8 @@
         float: none;
         margin-top: 2rem;
     }
+    .students-banner.overlay>h2{
+        font-size: 2.2rem;
+        left: 1rem;
+    }
 }

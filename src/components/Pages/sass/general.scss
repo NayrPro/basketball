@@ -84,19 +84,26 @@ $sizes : (88rem, inherit, 86rem, cover, 107rem);
 }
 
 
-/*Font of the title banner*/
-@mixin banner-overlay-heading-font{
-    font-size: 3rem;
+/*Font of the banner's title*/
+@mixin banner-overlay-heading-font($fontSize){
+    font-size: $fontSize;
     font-family: EqualizeRegular;
     color: #ffe40a;
 }
 .courses-banner.overlay,.students-banner.overlay,.videos-banner.overlay,
 .news-banner.overlay,.about-banner.overlay{
     h2{
-        @include banner-overlay-heading-font;
+        @include banner-overlay-heading-font(3rem);
     }
 }
-
+@media (max-width: 420px){
+    .courses-banner.overlay,.videos-banner.overlay,
+    .news-banner.overlay,.about-banner.overlay{
+        h2{        
+            @include banner-overlay-heading-font(2.5rem!important);
+        }    
+    }
+}
 
 /*Resizing of the background image of the banner when the window is resized*/
 @mixin banner-resizing($position-x, $elementBanner){

@@ -40,7 +40,7 @@ export default function Navbar(props){
     return(
         <nav className="navbar">
         <div className="navbar-title">
-            <a href="/">BASKETBALL</a>
+            { windowWidth > 570 ? <a href="/">BASKETBALL</a> : <a href="/"><i className="fas fa-basketball-ball"></i>B</a>}
         </div>
           <div className="navbar-links">
             <React.Fragment>

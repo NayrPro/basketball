@@ -201,4 +201,7 @@
     .main-form{
         border-radius: 0;
     }
+    .main-title-paragraph>a {
+        margin-top: 12%;
+    }
 }

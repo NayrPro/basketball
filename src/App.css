@@ -1,15 +1,7 @@
 body{
   background: black;
-  animation: body 2s ease-in 1;
-  
-  /*Prevent the horizontal scrollbar to show up during slide animations*/
-  overflow-x: hidden;
 }
 
-@keyframes body{
-  from{
-    opacity: 0;
-  }to{
-    opacity: 1;
-  }
+.App{
+  overflow-x: hidden;
 }

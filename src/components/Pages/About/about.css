@@ -129,3 +129,9 @@
     }
 }
 
+@media (max-width:420px){
+    .about-banner{
+		background-size : 230rem;
+        background-position-x: -104rem;
+    }
+}
