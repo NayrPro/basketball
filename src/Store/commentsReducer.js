@@ -7,7 +7,8 @@ for(let i=0; i<45; i++){
 const INITIAL_STATE = {
     comments: comments,
     username: "",
-    comment: ""
+    comment: "",
+    validate: ""
 }
 
 function commentsReducer(state = INITIAL_STATE, action){
@@ -26,6 +27,11 @@ function commentsReducer(state = INITIAL_STATE, action){
             return{
                 ...state,
                 comments: action.payload
+            };
+        case "VALIDATE":
+            return{
+                ...state,
+                validate: action.payload
             };
         default: return state;
     }

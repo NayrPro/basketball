@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import "./courses.css"
-import Course from './Course'
+import Course from './CourseModal/Course'
 import {useSelector, useDispatch} from "react-redux"
 
 export default function Courses() {

@@ -8,11 +8,12 @@ import windowSizeReducer from './Store/windowSizeReducer'
 import videoReducer from './Store/videoReducer'
 import coursesEltReducer from './Store/coursesEltReducer'
 import commentsReducer from './Store/commentsReducer'
+import videoOptionsReducer from './Store/videoOptionsReducer'
 import {Provider} from 'react-redux'
 import {HashRouter as Router} from "react-router-dom"
 
 const rootReducer = combineReducers({
-  windowSizeReducer, videoReducer, coursesEltReducer, commentsReducer
+  windowSizeReducer, videoReducer, coursesEltReducer, commentsReducer, videoOptionsReducer
 })
 
 const store = createStore(rootReducer)
