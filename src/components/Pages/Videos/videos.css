@@ -119,13 +119,13 @@ iframe{
         height: 100%;
         flex-direction: column;
     }
-    .fa-chevron-right, .fa-chevron-left{
+    .chevron>.fa-chevron-right,  .chevron>.fa-chevron-left{
         text-align: center;
     }
-    .fa-chevron-left{
+    .chevron>.fa-chevron-left{
         top: 4rem;
     }
-    .fa-chevron-right{
+    .chevron>.fa-chevron-right{
         top: -2rem;
     }
 }
@@ -154,12 +154,12 @@ iframe{
         flex-direction: row;
     }
 
-    .fa-times{
+    .video-overlay>.fa-times{
         font-size: 3rem;
         margin-top: 4rem;
     }
     
-    .fa-chevron-right, .fa-chevron-left{   
+    .chevron>.fa-chevron-right,  .chevron>.fa-chevron-left{   
         font-size: 4rem;
         top: 10rem;
     }

@@ -22,10 +22,9 @@ export default function Navbar(props){
     }, [windowWidth])
 
     // The dropdown list of the "menu-list" block is either shown or not 
-    function handleClick(e){
-      display === "block" ? setDisplay("none") : setDisplay("block");
+    function handleClick(e){     
+      (display === "none" && (e.target.id === "menu" || e.target.id === "menu-child")) ? setDisplay("block") : setDisplay("none");
     }
-          
     // The style of "navbar-link menu" will change depending on the value of display
     useEffect(() => {
       if(display === "block"){
@@ -44,31 +43,33 @@ export default function Navbar(props){
         </div>
           <div className="navbar-links">
             <React.Fragment>
-            <Link className={"navbar-link home " + props.active["home"]} to="/" replace>
+            <Link className={"navbar-link home " + props.active["home"]} to="/" id="home" onClick={(e) => handleClick(e)} replace>
             { windowWidth > 768 ? "Home" : <i className="fas fa-home"></i>}
             </Link>
 
               <div 
-                  className="navbar-link menu" 
-                  onClick={handleClick} 
+                  className="navbar-link menu"
+                  id="menu" 
+                  onClick={(e) => handleClick(e)} 
                   style={{background: background}}>
               
                 {windowWidth > 768 ? 
                 <a 
-                  href="/" 
+                  href="/"
+                  id="menu-child" 
                   onClick={(e) => e.preventDefault()}
                   style={{color: color}}>
                   Menu
-                  <i className={display === "block" ? "fas fa-caret-down" : "fas fa-caret-up"}></i>
+                  <i id="menu-child" className={display === "block" ? "fas fa-caret-down" : "fas fa-caret-up"}></i>
                   </a> 
                   
                   : 
                 
-                <a 
-                  href="/" 
-                  onClick={(e) => e.preventDefault()}>
-                    <i className="fa fa-bars" style={{color: color}}></i>
-                </a>
+                <i 
+                  className= "fa fa-bars"
+                  id="menu-child"
+                  style={{color: color}}>
+                </i>
                 }
                 
                 <div className="menu-list" style={{display: display}}>
@@ -80,7 +81,7 @@ export default function Navbar(props){
                 </div>
 
               </div>
-              <Link to="/login" className={"navbar-link " + props.active["login"]} replace>
+              <Link to="/login" className={"navbar-link " + props.active["login"]} id="login" onClick={(e) => handleClick(e)} replace>
               { windowWidth > 768 ? "Login" : <i className="fa fa-user" ></i>}
               </Link>
             </React.Fragment>

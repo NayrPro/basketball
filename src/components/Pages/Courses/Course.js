@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import "./courses.css"
 import {useSelector, useDispatch} from "react-redux"
 import {v4 as uuidv4} from "uuid"
@@ -11,7 +11,7 @@ export default function Course() {
     const [options, setOptions] = useState("description")
     const [coursesCompleted, setCoursesCompleted] = useState(0)
     const [validate, setValidate] = useState("")
-
+    const ref = useRef()
     
     useEffect(() => {
         validate === "on" && setTimeout(() => {
@@ -19,16 +19,20 @@ export default function Course() {
         }, 700);
     }, [validate])
 
+    useEffect(()=>{
+        ref.current.scrollIntoView()
+    }, [elt])
+
 
     function commentList(){
         if (comments[elt-1] !== undefined){
             return comments[elt-1].map(comment => 
                 (
-                    <p  key={uuidv4()}
+                    <div  key={uuidv4()}
                         className="comment-paragraph">
-                        <span>from <span style={{color: "yellow"}}>{comment.username}</span> , {comment.date}:</span><br/><br/>
+                        <p>from <span style={{color: "yellow"}}>{comment.username}</span> , {comment.date}:</p><br/>
                         {comment.comment}  
-                    </p>
+                    </div>
                 )
             )
         }
@@ -52,9 +56,13 @@ export default function Course() {
             array.push(
             <div
                 key={i}
+                ref={i === elt ? ref : null}
                 className="courses-list-elmt" 
                 style={{backgroundColor: i === elt && "orange"}}
-                onClick={() => activeElement(i)}
+                onClick={() => {
+                    activeElement(i)
+                    setOptions("description")
+                }}
             >
                 <input type="checkbox" onClick={(e) => validateCourse(e)}/>
                 <div>
@@ -105,7 +113,51 @@ export default function Course() {
         <div className="course-videos">
 
             <div className="course-video-container">
-
+                
+                <div className="quit-course-video">
+	                <i 
+                        className="fas fa-times" 
+                        aria-hidden="true"
+                        onClick={() => {
+                            dispatch({
+                                type:"QUIT"
+                            })    
+                        }}
+                    ></i>
+                </div>
+                <div 
+                    className="course-video-arrow"
+                    style={{display: elt === 1? "block" : "flex"}}
+                >
+  	                <i className="fas fa-chevron-left" 
+                        style={{
+                            display: elt === 1 ? "none" : "block",
+                        }}
+                        aria-hidden="true"
+                        onClick={()=>{
+                            dispatch({
+                                type:"ELT",
+                                payload: elt-1
+                            })
+                            setOptions("description")
+                        }}
+                    ></i>
+	                <i className="fas fa-chevron-right" 
+                        style={{
+                            display: elt === 45? "none" : "block",
+                            float: elt === 1 && "right"
+                        }}
+                        aria-hidden="true"
+                        onClick={()=>{
+                            dispatch({
+                                type:"ELT",
+                                payload: elt+1
+                            })
+                            setOptions("description")
+                        }}
+                    ></i>
+                </div>
+                
                 <video className="course-video" controls>
                     <source src="/" type="video/mp4"/>
                 </video> 
@@ -159,14 +211,6 @@ export default function Course() {
 	                    <p>Courses Playlist</p>
 	                    <span>{coursesCompleted}/45</span>
                     </div>
-                    <i 
-                        className="fas fa-times" 
-                        onClick={() => {
-                            dispatch({
-                                type:"QUIT"
-                            })    
-                        }}
-                    ></i>
                 </div>
                 {courses()}
             </div>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import "./courses.css"
 import Course from './Course'
 import {useSelector, useDispatch} from "react-redux"
@@ -7,6 +7,7 @@ export default function Courses() {
     const [page, setPage] = useState(1)
     const {elt} = useSelector(state => ({...state.coursesEltReducer})) 
     const dispatch = useDispatch() 
+    const ref = useRef()
 
     /* Will contain all the courses element */
     const [courses, setCourses] = useState()
@@ -49,7 +50,9 @@ export default function Courses() {
     } 
     
     useEffect(() => {
-        coursesPush(page)
+        coursesPush(page) 
+        window.scrollTo(0, 0);
+        elt === 0 && ref.current.blur()
         // eslint-disable-next-line
     }, [page])
 
@@ -68,16 +71,16 @@ export default function Courses() {
                         </div>
                     </div>
                     <div className="courses-pages">
+                        <div className="courses-grid">
+                            {courses}
+                        </div>
                         <div className="courses-pages container">
-                            <select name="pages" id="page-select" onChange={(e) => handleChange(e)}>
-                                <option value="">-- Pages ---</option>
+                            <select name="pages" id="page-select" onChange={(e) => handleChange(e)} ref={ref}>
+                                <option value="">Pages</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                             </select>
-                        </div>
-                        <div className="courses-grid">
-                            {courses}
                         </div>
                     </div>
                 </div> 
