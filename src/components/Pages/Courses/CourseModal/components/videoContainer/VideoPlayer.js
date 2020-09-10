@@ -7,13 +7,27 @@ export default function VideoPlayer() {
 
     const dispatch = useDispatch() 
 
+    function cleanInputs(){
+        dispatch({
+            type:"USER",
+            payload: "" 
+        })
+        dispatch({
+            type:"CMT",
+            payload: "" 
+        })
+    }
+
     return (
         <React.Fragment>
 
             <div className="quit-course-video">
                 <i className="fas fa-times" 
                    aria-hidden="true"
-                   onClick={() => {dispatch({type:"QUIT"})}}></i>
+                   onClick={() => {
+                       dispatch({type:"QUIT"}) 
+                       cleanInputs()
+                    }}></i>
             </div>
 
             <div className="course-video-arrow"
@@ -23,7 +37,9 @@ export default function VideoPlayer() {
                    style={{display: elt === 1 ? "none" : "block"}}
                    onClick={()=>{
                             dispatch({type:"ELT", payload: elt-1})
-                            dispatch({type:"DESCRIPTION"})}}
+                            dispatch({type:"DESCRIPTION"})
+                            cleanInputs()
+                    }}
                    aria-hidden="true">
                 </i>
 
@@ -31,7 +47,9 @@ export default function VideoPlayer() {
                    style={{ display: elt === 45? "none" : "block",
                             float: elt === 1 && "right"}}
                    onClick={()=>{dispatch({type:"ELT", payload: elt+1})
-                                 dispatch({type:"DESCRIPTION"})}}
+                                 dispatch({type:"DESCRIPTION"})
+                                 cleanInputs()
+                            }}
                    aria-hidden="true">
                 </i>
 

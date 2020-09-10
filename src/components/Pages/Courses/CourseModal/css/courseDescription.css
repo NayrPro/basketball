@@ -1,0 +1,97 @@
+.course-video-description{
+	overflow-y: scroll;
+	color: white;
+}
+
+.course-video-options{
+	display: flex;
+}
+
+.course-video-options>div{
+	padding: 20px;
+	border-bottom: 1px solid grey;
+	outline: none;
+}
+
+.course-video-options>div:hover{
+	background-color: grey;
+	cursor: pointer;
+}
+
+.course-video-options>span{
+	display: block;
+	border-bottom: 1px solid grey;
+	width: 100%;
+}
+
+.course-video-description>h2, .comment-label{
+	text-align: start;
+	width: 90%;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+.description-paragraph, .comment-paragraph{
+	width: 90%;
+	margin: auto;
+	margin-bottom: 20px;
+}
+ 
+.comment-label, .comment-paragraph>p{
+	font-style: italic;
+}
+
+
+.comment-paragraph>p {
+	margin: 0;
+}
+
+.comment-paragraph{
+	width: 80%;
+	padding: 25px;
+	background-color: #2f2b2b;
+}
+
+.comment-input, .comment-user{
+	margin-left: 39px;
+	width: 90%;
+}
+
+.comment-input{
+	height: 40%;
+}
+
+.comment-button{
+	margin-left: 39px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.comment-validated{
+	display: none;
+	position: fixed;
+	padding: 14px;
+	bottom: 9px;
+	background: green;
+	border: 0px;
+	border-radius: 3px;
+	width: 20rem;
+	text-align: center;
+	left: 5px;
+}
+
+.comment-validated.on{
+	display: block;
+	animation: fade-out 1s linear;
+}
+
+@keyframes fade-out{
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}

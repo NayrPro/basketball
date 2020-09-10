@@ -34,6 +34,8 @@
 	height: 2rem;
 	text-align: center;
 	font-size: 1.4rem;
+	border-radius: 13px;
+	outline: none;
 }
 
 .course>img{

@@ -20,13 +20,6 @@ export default function VideoPlaylist() {
         e.target.checked === true ? setCoursesCompleted(coursesCompleted+1) : setCoursesCompleted(coursesCompleted-1)
     }
 
-    function activeElement(courseNb){// Pourquoi cette fonction existe-t-elle
-        dispatch({
-            type: "ELT",
-            payload: courseNb
-        })
-    }
-
     function courses(){
         var array = []
         for(let i = 1; i<=45; i++){
@@ -37,7 +30,10 @@ export default function VideoPlaylist() {
                 className="courses-list-elmt" 
                 style={{backgroundColor: i === elt && "orange"}}
                 onClick={() => {
-                    activeElement(i)
+                    dispatch({
+                        type: "ELT",
+                        payload: i
+                    })
                     dispatch({
                         type: "DESCRIPTION"
                     })

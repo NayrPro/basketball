@@ -1,12 +1,9 @@
 import React from 'react'
-import "./coursemodal.css"
-// import {useSelector} from "react-redux"
-import VideoContainer from './VideoContainer'
-import VideoPlaylist from './VideoPlaylist'
+import "./css/coursemodal.css"
+import VideoContainer from './components/VideoContainer'
+import VideoPlaylist from './components/VideoPlaylist'
 
 export default function Course() {
-
-    // const {elt} = useSelector(state => ({...state.coursesEltReducer}))
 
     return (
         <div className="course-videos">

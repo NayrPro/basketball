@@ -43,7 +43,7 @@ export default function CommentSection() {
         const newComment = {username:username, comment: comment, date: fullDate} 
         const array = comments
         array[elt-1].push(newComment)
-    
+            
         dispatch({
             type:"CMTS",
             payload: array 
@@ -53,15 +53,25 @@ export default function CommentSection() {
             type:"VALIDATE",
             payload: "on"
         })
+        
+        dispatch({
+            type:"USER",
+            payload: "" 
+        })
+        
+        dispatch({
+            type:"CMT",
+            payload: "" 
+        })
     }
 
     return (
         <React.Fragment>
             <p className="comment-label">Enter your username:</p>
-            <input type="text" className="comment-user" onChange={(e) => handleChange(e)}></input>
+            <input type="text" className="comment-user" onChange={(e) => handleChange(e)} value={username}></input>
             <p className="comment-label">Leave your comment:</p>
-            <textarea className="comment-input" onChange={(e) => handleChange(e)}></textarea>
-            <button className="comment-button" onClick={sendComment}>Comment</button>
+            <textarea className="comment-input" onChange={(e) => handleChange(e)} value={comment}></textarea>
+            <button className="comment-button" onClick={sendComment} disabled={username === "" && true}>Comment</button>
             { 
                 commentList()
             }

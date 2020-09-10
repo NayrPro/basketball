@@ -16,10 +16,10 @@ import AOS from 'aos'
 
 function App() {
 
-  /**  Keeping track of the size of the window for all pages  **/
-
+  
   const dispatch = useDispatch()  
   
+  /**  Keeps track of the size of the window for all pages  **/
   const resize = useCallback( () => {
       dispatch({
         type: "RESIZE",
@@ -63,6 +63,7 @@ function App() {
         ...emptedValues
       })
     }
+    window.scrollTo(0, 0);
   }, [location])
 
   return (
