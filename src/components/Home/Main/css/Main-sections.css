@@ -1,4 +1,3 @@
-
 .main-sections{
     width: 37.5rem;
     height: 31.898rem;
@@ -78,16 +77,16 @@
     border-radius: 9%;
 }
 .main-section.courses{
-    background-image: url("./images/field.jpg");
+    background-image: url("../images/field.jpg");
 }
 .main-section.students{
-    background-image: url("./images/shooting.jpg");
+    background-image: url("../images/shooting.jpg");
 }
 .main-section.videos{
-    background-image: url("./images/street_game.jpg");
+    background-image: url("../images/street_game.jpg");
 }
 .main-section.news{
-    background-image: url("./images/ball.jpg");
+    background-image: url("../images/ball.jpg");
 }
 .main-section:hover{
     opacity: 0.5;

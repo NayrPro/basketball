@@ -27,7 +27,7 @@ export default function Courses() {
             array.push(
                 <div className="course" key={i}>
                     <img 
-                        src={require("./course1.jpg")}
+                        src={require("./img/course1.jpg")}
                         onClick={() => goToCourse(i)} 
                         alt={`course ${i}`}
                     />

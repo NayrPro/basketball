@@ -1,7 +1,7 @@
 @import "../general.css";
 
 .courses-banner{
-    background-image: url("./courses.jpg");
+    background-image: url("./img/courses.jpg");
 }
 
 @media (max-width: 769px){

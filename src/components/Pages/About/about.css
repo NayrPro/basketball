@@ -1,9 +1,5 @@
 @import "../general.css";
 
-/* body{
-    text-shadow: 1px 1px black;
-} */
-
 .about-banner{
     background-image: url("./about.jpg");
 }
