@@ -29,7 +29,7 @@ This is a responsive front-end basketball website project developed using react.
 
 * Clone Repository :
 ```bash
-git clone <lien.git>
+git clone https://github.com/NayrPro/Client-Side-Basketball-Website.git
 ```
 
 * Install :
@@ -42,32 +42,34 @@ npm install
 npm start
 ```
 <br/><br/>
-## Acknowledgements
+## Special Thanks
 
 ### Helpful Tutorials and Courses :
 
 * CSS Animation and React Courses(in French):
 
-    * Enzo Ustariz : https://www.ecole-du-web.net/
+    * [**Enzo Ustariz**](https://github.com/Ziratsu) : https://www.ecole-du-web.net/
 
 * Formik Tutorial:
   
-    * Codevolution : https://www.youtube.com/channel/UC80PWRj_ZU8Zu0HSMNVwKWw
+    * [**Codevolution**](https://github.com/gopinav) : https://www.youtube.com/channel/UC80PWRj_ZU8Zu0HSMNVwKWw<br>
     https://www.youtube.com/playlist?list=PLC3y8-rFHvwiPmFbtzEWjESkqBVDbdgGu
 
-* Flashing hover effect:
-https://www.youtube.com/watch?v=Wo-kQopjWiQ
+* Flashing hover effect tutorial:
+  * [**Online Web ustaad**](https://www.youtube.com/channel/UC8xTHK97Ng__KZvGcO_K7CA) :  
+    https://www.youtube.com/watch?v=Wo-kQopjWiQ
 
 * How to fetch data from rss feeds:
+    * [**Chris Coyier**](https://chriscoyier.net/) : 
 https://css-tricks.com/how-to-fetch-and-parse-rss-feeds-in-javascript/
 
 ### Ressources :
 
 * Links :
 
-  * ESPN NBA RSS feed https://www.espn.com/espn/rss/nba/news
+  * ESPN NBA News RSS feed https://www.espn.com/espn/rss/nba/news
 
-* Images sources and authors: 
+* Images sources and their authors: 
     
     [**LOGAN WEAVER**](https://unsplash.com/@lgnwvr) : <br/>  https://unsplash.com/photos/XcBPc0Q_2h8
 
@@ -139,3 +141,9 @@ https://css-tricks.com/how-to-fetch-and-parse-rss-feeds-in-javascript/
 
     [**Marcelo Dias**](https://www.pexels.com/@marcelodias) : <br/>
     https://www.pexels.com/photo/portrait-photo-of-woman-in-plaid-shirt-and-black-t-shirt-2556089/
+
+    
+<br/><br/>    
+## License
+
+This project is released under the MIT license.

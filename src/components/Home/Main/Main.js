@@ -10,8 +10,8 @@ export default function Main() {
     return (
         <div className="main">
             <Headline/>
-            <Info/>
             <Section/>
+            <Info/>
             <Form/>
         </div>
     )
