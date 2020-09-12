@@ -1,6 +1,6 @@
 # Client-side Basketball Website
 
-[Live Demo](https://NayrPro.github.io/basketball)
+[Live Demo](https://NayrPro.github.io/Client-Side-Basketball-Website)
 <br/><br/>
 This is a responsive front-end basketball website project developed using react.
 <br/><br/>
