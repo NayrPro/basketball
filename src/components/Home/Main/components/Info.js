@@ -1,5 +1,6 @@
 import React, {useState, useRef} from 'react'
 import {useSelector} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 export default function Info() {
     
@@ -35,7 +36,7 @@ export default function Info() {
             <div className="main-info-content">
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, repellat.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat perspiciatis quis asperiores, enim esse deleniti iste harum hic accusamus reprehenderit quaerat repellat optio laboriosam repellendus ab ipsam earum possimus. Labore quos quaerat at corporis esse! Asperiores, qui labore quia ratione tenetur obcaecati sint, accusamus excepturi quibusdam fuga deleniti nihil. Repellat?</p>
-                <a href="/">Click Here!</a>
+                <Link to="/" replace>Click Here!</Link>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
+import {Link} from 'react-router-dom'
 import './Footer.css'
 
 export default function Footer() {
@@ -14,19 +15,19 @@ export default function Footer() {
             <h1 className="footer-title">Footer</h1>
             <div className="footer-lists">
                 <ul>
-                    <li> <a href="/">Lorem</a></li>
-                    <li> <a href="/">Lorem</a></li>
-                    <li> <a href="/">Lorem</a></li>
+                    <li> <Link href="/" replace>Lorem</Link></li>
+                    <li> <Link href="/" replace>Lorem</Link></li>
+                    <li> <Link href="/" replace>Lorem</Link></li>
                 </ul>
                 <ul>
-                    <li> <a href="/">Lorem</a></li>
-                    <li> <a href="/">Lorem</a></li>
-                    <li> <a href="/">Lorem</a></li>
+                    <li> <Link href="/" replace>Lorem</Link></li>
+                    <li> <Link href="/" replace>Lorem</Link></li>
+                    <li> <Link href="/" replace>Lorem</Link></li>
                 </ul>
                 <ul>
-                    <li> <a href="/">Lorem</a></li>
-                    <li> <a href="/">Lorem</a></li>
-                    <li> <a href="/">Lorem</a></li>
+                    <li> <Link href="/" replace>Lorem</Link></li>
+                    <li> <Link href="/" replace>Lorem</Link></li>
+                    <li> <Link href="/" replace>Lorem</Link></li>
                 </ul>
             </div>
             <div className="footer-social-medias">
