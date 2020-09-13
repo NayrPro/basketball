@@ -78,16 +78,16 @@
     border-radius: 9%;
 }
 .main-section.courses{
-    background-image: url("../images/field.jpg");
+    background-image: url("../images/field.webp");
 }
 .main-section.students{
-    background-image: url("../images/shooting.jpg");
+    background-image: url("../images/shooting.webp");
 }
 .main-section.videos{
-    background-image: url("../images/street_game.jpg");
+    background-image: url("../images/street_game.webp");
 }
 .main-section.news{
-    background-image: url("../images/ball.jpg");
+    background-image: url("../images/ball.webp");
 }
 .main-section:hover{
     opacity: 0.5;
