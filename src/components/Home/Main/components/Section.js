@@ -93,38 +93,38 @@ export default function Section() {
             data-aos = {windowSize > 992 ? "fade-in" : ""}
         >
                 <div 
-                    className="main-sections-front" 
+                    className="main-sections-front lazy" 
                     id="front"
                     ref={front}
                 >
-                    <div className="main-section courses" 
+                    <div className="main-section courses lazy" 
                          id="courses" 
                          onClick={handleClick}
                          ref={courses}
                     ></div>
-                    <div className="main-section students" 
+                    <div className="main-section students lazy" 
                          id="students"
                          onClick={handleClick}
                          ref={students}
                     ></div>
-                    <div className="main-section videos" 
+                    <div className="main-section videos lazy" 
                          id="videos"
                          onClick={handleClick}
                          ref={videos}
                     ></div>
-	                <div className="main-section news" 
+	                <div className="main-section news lazy" 
                          id="news"
                          onClick={handleClick}
                          ref={news}
                     ></div>
                 </div>
-                <div className="main-sections-back" 
+                <div className="main-sections-back lazy" 
                      id="back"
                      onClick={handleClick}
                      ref={back}
                 >
                     <div 
-                        className="main-section-info" 
+                        className="main-section-info lazy" 
                         id="info"
                         style={{
                             opacity : opacity,
