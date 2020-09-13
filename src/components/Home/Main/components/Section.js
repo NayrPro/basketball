@@ -93,38 +93,46 @@ export default function Section() {
             data-aos = {windowSize > 992 ? "fade-in" : ""}
         >
                 <div 
-                    className="main-sections-front lazy" 
+                    className="main-sections-front" 
                     id="front"
                     ref={front}
                 >
                     <div className="main-section courses lazy" 
-                         id="courses" 
+                         id="courses"
+                         data-src={require("../images/field.jpg")}
+                         data-srcset={require("../images/field.jpg")} 
                          onClick={handleClick}
                          ref={courses}
                     ></div>
                     <div className="main-section students lazy" 
                          id="students"
+                         data-src={require("../images/shooting.jpg")}
+                         data-srcset={require("../images/shooting.jpg")}
                          onClick={handleClick}
                          ref={students}
                     ></div>
                     <div className="main-section videos lazy" 
                          id="videos"
+                         data-src={require("../images/street_game.jpg")}
+                         data-srcset={require("../images/street_game.jpg")}
                          onClick={handleClick}
                          ref={videos}
                     ></div>
 	                <div className="main-section news lazy" 
                          id="news"
+                         data-src={require("../images/ball.jpg")}
+                         data-srcset={require("../images/ball.jpg")}
                          onClick={handleClick}
                          ref={news}
                     ></div>
                 </div>
-                <div className="main-sections-back lazy" 
+                <div className="main-sections-back" 
                      id="back"
                      onClick={handleClick}
                      ref={back}
                 >
                     <div 
-                        className="main-section-info lazy" 
+                        className="main-section-info" 
                         id="info"
                         style={{
                             opacity : opacity,
