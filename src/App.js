@@ -11,6 +11,7 @@ import Login from './components/Pages/Login/Login'
 import ErrorPage from './components/Pages/ErrorPage/ErrorPage'
 import Navbar from './Navbar/Navbar'
 import {Route, Switch, useLocation} from 'react-router-dom'
+import LazyLoad from "vanilla-lazyload";
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 
@@ -41,6 +42,13 @@ function App() {
     AOS.init({
         duration : 1000
     });
+
+    /*Creation and update of a LazyLoad object that will allow
+      images with the "lazy" class to load when they're visible 
+      to the user for faster browsing */
+    document.lazyLoadInstance = new LazyLoad({elements_selector: ".lazy"});
+
+    document.lazyLoadInstance.update();
     
   }, [])
   
