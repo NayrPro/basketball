@@ -97,31 +97,23 @@ export default function Section() {
                     id="front"
                     ref={front}
                 >
-                    <div className="main-section courses lazy" 
-                         id="courses"
-                         data-src={require("../images/field.jpg")}
-                         data-srcset={require("../images/field.jpg")} 
+                    <div className="main-section courses" 
+                         id="courses" 
                          onClick={handleClick}
                          ref={courses}
                     ></div>
-                    <div className="main-section students lazy" 
+                    <div className="main-section students" 
                          id="students"
-                         data-src={require("../images/shooting.jpg")}
-                         data-srcset={require("../images/shooting.jpg")}
                          onClick={handleClick}
                          ref={students}
                     ></div>
-                    <div className="main-section videos lazy" 
+                    <div className="main-section videos" 
                          id="videos"
-                         data-src={require("../images/street_game.jpg")}
-                         data-srcset={require("../images/street_game.jpg")}
                          onClick={handleClick}
                          ref={videos}
                     ></div>
-	                <div className="main-section news lazy" 
+	                <div className="main-section news" 
                          id="news"
-                         data-src={require("../images/ball.jpg")}
-                         data-srcset={require("../images/ball.jpg")}
                          onClick={handleClick}
                          ref={news}
                     ></div>
