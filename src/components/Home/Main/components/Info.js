@@ -33,7 +33,10 @@ export default function Info() {
             ref={mainInfo}
             onMouseMove={handleMove}
         >
-            <div className="main-info-content">
+            <div className="main-info-content lazy"
+                data-src={require("../images/stadium.jpg")}
+                data-srcset={require("../images/stadium.jpg")}
+            >
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, repellat.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat perspiciatis quis asperiores, enim esse deleniti iste harum hic accusamus reprehenderit quaerat repellat optio laboriosam repellendus ab ipsam earum possimus. Labore quos quaerat at corporis esse! Asperiores, qui labore quia ratione tenetur obcaecati sint, accusamus excepturi quibusdam fuga deleniti nihil. Repellat?</p>
                 <Link to="/" replace>Click Here!</Link>
