@@ -32,6 +32,7 @@ export default function Info() {
             data-aos = {windowSize > 992 ? "zoom-in" : ""}
             ref={mainInfo}
             onMouseMove={handleMove}
+            height="654"
         >
             <div className="main-info-content">
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, repellat.</h2>

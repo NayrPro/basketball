@@ -91,6 +91,7 @@ export default function Section() {
         <div 
             className="main-sections"
             data-aos = {windowSize > 992 ? "fade-in" : ""}
+            height="510.359"
         >
                 <div 
                     className="main-sections-front" 
