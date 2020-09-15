@@ -10,17 +10,17 @@ export default function About() {
                 <h2 className="our-team">Our Team</h2>
                 <div className="about-team">
                     <div className="team-member">
-                        <img src={require("./team/lorem (1).jpg")} alt="lorem1"/>
+                        <img src={require("./team/lorem (1).webp")} alt="lorem1"/>
                         <p>Lorem1</p>
                         <span>Lorem ipsum dolor sit amet consectetur</span>
                     </div>
                     <div className="team-member">
-                        <img src={require("./team/lorem (2).jpg")}  alt="lorem2"/>
+                        <img src={require("./team/lorem (2).webp")}  alt="lorem2"/>
                         <p>Lorem2</p>
                         <span>Lorem ipsum dolor sit amet consectetur</span>
                     </div>
                     <div className="team-member">
-                        <img src={require("./team/lorem (3).jpg")}  alt="lorem3"/>
+                        <img src={require("./team/lorem (3).webp")}  alt="lorem3"/>
                         <p>Lorem3</p>
                         <span>Lorem ipsum dolor sit amet consectetur</span>
                     </div>

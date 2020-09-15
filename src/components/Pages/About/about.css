@@ -1,7 +1,7 @@
 @import "../general.css";
 
 .about-banner{
-    background-image: url("./about.jpg");
+    background-image: url("./about.webp");
 }
 
 .about-banner.overlay{

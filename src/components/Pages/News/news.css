@@ -2,7 +2,7 @@
 @import "./loader.css";
 
 .news-banner{
-    background-image: url("./images/news.jpg");
+    background-image: url("./images/news.webp");
 }
 
 .article-description>hr{

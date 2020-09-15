@@ -27,7 +27,7 @@ export default function Courses() {
             array.push(
                 <div className="course" key={i}>
                     <img 
-                        src={require("./img/course1.jpg")}
+                        src={require("./img/course1.webp")}
                         onClick={() => goToCourse(i)} 
                         alt={`course ${i}`}
                     />
