@@ -8,7 +8,8 @@
 
 .login-form{
     width: 23rem;
-    
+    margin-bottom: auto;
+
     position: absolute;
     top: 50%;
     left: 50%;
