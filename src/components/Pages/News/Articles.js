@@ -23,7 +23,7 @@ export default function Articles() {
                 items.forEach((el,i) => {
             
                     const image = el.querySelector("enclosure").getAttribute('url');
-                    const link = el.querySelector("link");
+                    const link = el.querySelector("link").textContent;
                     const title = el.querySelector("title").textContent;
                     const pubDate = el.querySelector("pubDate").textContent;
                     const description = el.querySelector("description").textContent;
