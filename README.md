@@ -29,7 +29,7 @@ This is a responsive front-end basketball website project developed using react.
 
 * Clone Repository :
 ```bash
-git clone https://github.com/NayrPro/Client-Side-Basketball-Website.git
+git clone https://github.com/NayrPro/basketball.git
 ```
 
 * Install :
