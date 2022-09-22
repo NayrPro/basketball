@@ -22,8 +22,8 @@ export default function Articles() {
                 
                 items.forEach((el,i) => {
             
-                    const image = el.querySelector("image").textContent;
-                    const link = el.querySelector("link").textContent;
+                    const image = el.querySelector("enclosure").getAttribute('url');
+                    const link = el.querySelector("link");
                     const title = el.querySelector("title").textContent;
                     const pubDate = el.querySelector("pubDate").textContent;
                     const description = el.querySelector("description").textContent;
@@ -71,7 +71,12 @@ export default function Articles() {
                                     <hr/>
                                     <div className="article-content">
                                         <p>{article.description} [...]</p>
-                                        <a href={article.link}>Read More</a>
+                                        <a href={article.link}
+                                           style={{fontStyle: 'italic',
+                                                   fontWeight: 'bold', 
+                                                   color: 'white'}}>
+                                                    Read More
+                                        </a>
                                     </div>
                                 </div>
                             </div>
